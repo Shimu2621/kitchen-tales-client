@@ -1,0 +1,822 @@
+[
+  {
+    "title": "Grilled Salmon",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQq4P1LyDa0yJ4V_hv6R5edb7VWtptGYTcfew&s",
+    "description": "Perfectly grilled salmon with a lemon-garlic marinade.",
+    "method": [
+      "Marinate salmon with olive oil, garlic, and lemon juice for 30 minutes.",
+      "Preheat the grill to medium heat.",
+      "Grill salmon for 6-8 minutes on each side until cooked through."
+    ],
+    "ingredients": [
+      { "name": "Salmon fillets", "quantity": "4" },
+      { "name": "Garlic", "quantity": "2 cloves" },
+      { "name": "Lemon juice", "quantity": "3 tbsp" },
+      { "name": "Olive oil", "quantity": "2 tbsp" }
+    ],
+    "servings": 4,
+    "author_id": "6771d77caef7a6de66a246b0",
+    "reviews": [
+      {
+        "reviewer_id": "6771e203aef7a6de66a246cc",
+        "rating": 4.5,
+        "reviewText": "Everyone at dinner couldn’t stop raving about this dish. It was a hit!",
+        "date": "2024-12-25T08:30:00Z"
+      }
+    ],
+    "favorites": 50,
+    "categories": "Fish"
+  },
+  {
+    "title": "Baked Cod",
+    "image": "https://whatscookinchicago.com/wp-content/uploads/2024/01/570_file-768x768.png",
+    "description": "A healthy baked cod recipe with herbs and spices.",
+    "method": [
+      "Preheat oven to 400°F (200°C).",
+      "Season cod with paprika, garlic powder, and salt.",
+      "Bake in the oven for 15-20 minutes."
+    ],
+    "ingredients": [
+      { "name": "Cod fillets", "quantity": "4" },
+      { "name": "Paprika", "quantity": "1 tsp" },
+      { "name": "Garlic powder", "quantity": "1 tsp" },
+      { "name": "Salt", "quantity": "to taste" }
+    ],
+    "servings": 4,
+    "author_id": "6771db6baef7a6de66a246b2",
+    "reviews": [
+      {
+        "reviewer_id": "6771e18eaef7a6de66a246ca",
+        "rating": 4.5,
+        "reviewText": "Perfect for a quick dinner after a busy day. So satisfying!",
+        "date": "2024-12-25T08:30:00Z"
+      }
+    ],
+    "favorites": 40,
+    "categories": "Fish"
+  },
+
+  {
+    "title": "Fish Tacos",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHg1mdvFz8NzKX3Ne5FzJ1luLZ8K8uAO3UyA&s",
+    "description": "Crispy fish tacos with a creamy lime sauce.",
+    "method": [
+      "Coat fish in a flour and spice mixture.",
+      "Pan-fry the fish until crispy.",
+      "Assemble tacos with fish, cabbage, and sauce."
+    ],
+    "ingredients": [
+      { "name": "White fish fillets", "quantity": "500g" },
+      { "name": "Flour", "quantity": "1/2 cup" },
+      { "name": "Cabbage", "quantity": "1 cup shredded" },
+      { "name": "Lime", "quantity": "1" }
+    ],
+    "servings": 4,
+    "author_id": "6771db9faef7a6de66a246b4",
+    "reviews": [
+      {
+        "reviewer_id": "6771e114aef7a6de66a246c8",
+        "rating": 5,
+        "reviewText": "My kids are picky eaters, but they devoured this. Thank you!",
+        "date": "2024-12-25T08:30:00Z"
+      }
+    ],
+    "favorites": 60,
+    "categories": "Fish"
+  },
+
+  {
+    "title": "Lemon Butter Tilapia",
+    "image": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2010/1/21/0/FNM_030110-Weeknight-040_s4x3.jpg.rend.hgtvcom.1280.960.85.suffix/1382539275238.webp",
+    "description": "A light and flavorful tilapia dish with a tangy lemon-butter sauce.",
+    "method": [
+      "Season tilapia fillets with salt and pepper.",
+      "Heat butter in a skillet over medium heat.",
+      "Cook tilapia for 3-4 minutes on each side until golden.",
+      "Squeeze fresh lemon juice over the fillets and serve."
+    ],
+    "ingredients": [
+      { "name": "Tilapia fillets", "quantity": "4" },
+      { "name": "Butter", "quantity": "2 tbsp" },
+      { "name": "Lemon", "quantity": "1, juiced" },
+      { "name": "Salt", "quantity": "to taste" },
+      { "name": "Black pepper", "quantity": "to taste" }
+    ],
+    "servings": 4,
+    "author_id": "6771dbd6aef7a6de66a246b6",
+    "reviews": [
+      {
+        "reviewer_id": "6771e0c4aef7a6de66a246c6",
+        "rating": 3.5,
+        "reviewText": "The spice blend was spot on and elevated the dish beautifully.",
+        "date": "2024-12-25T08:30:00Z"
+      }
+    ],
+    "favorites": 70,
+    "categories": "Fish"
+  },
+  {
+    "title": "Italian Pizza",
+    "image": "https://pizzaware.com/wp-content/uploads/2023/05/i1-740x494.jpg",
+    "description": "A classic Italian pizza with tomato sauce, fresh mozzarella, and basil.",
+    "method": [
+      "Preheat oven to 475°F (245°C).",
+      "Roll out pizza dough and spread tomato sauce evenly.",
+      "Top with fresh mozzarella slices and basil leaves.",
+      "Bake for 10-12 minutes until crust is golden and cheese is bubbly."
+    ],
+    "ingredients": [
+      { "name": "Pizza dough", "quantity": "1 ball" },
+      { "name": "Tomato sauce", "quantity": "1/2 cup" },
+      { "name": "Fresh mozzarella", "quantity": "200g, sliced" },
+      { "name": "Fresh basil leaves", "quantity": "10-12 leaves" },
+      { "name": "Olive oil", "quantity": "1 tbsp" }
+    ],
+    "servings": 4,
+    "author_id": "6771dc0aaef7a6de66a246b8",
+    "reviews": [
+      {
+        "reviewer_id": "6771e114aef7a6de66a246c8",
+        "rating": 4,
+        "reviewText": "This turned out amazing! Just like the photos. Highly recommend.",
+        "date": "2024-12-25T08:30:00Z"
+      }
+    ],
+    "favorites": 150,
+    "categories": "Italian"
+  },
+  {
+    "title": "Spaghetti Carbonara",
+    "image": "https://img.freepik.com/premium-photo/pasta-spaghetti-carbonara-plate-black-background-generative-ai_74760-2101.jpg",
+    "description": "A creamy and rich pasta dish made with eggs, cheese, pancetta, and black pepper.",
+    "method": [
+      "Cook spaghetti until al dente and reserve some pasta water.",
+      "Cook pancetta in a pan until crispy.",
+      "Whisk eggs with grated Parmesan cheese in a bowl.",
+      "Combine spaghetti, pancetta, and egg mixture, adding pasta water for creaminess.",
+      "Season with black pepper and serve."
+    ],
+    "ingredients": [
+      { "name": "Spaghetti", "quantity": "400g" },
+      { "name": "Pancetta", "quantity": "150g, diced" },
+      { "name": "Eggs", "quantity": "3 large" },
+      { "name": "Parmesan cheese", "quantity": "1 cup, grated" },
+      { "name": "Black pepper", "quantity": "to taste" }
+    ],
+    "servings": 4,
+    "author_id": "6771dc4eaef7a6de66a246ba",
+    "reviews": [
+      {
+        "reviewer_id": "6771e18eaef7a6de66a246ca",
+        "rating": 4.5,
+        "reviewText": "This recipe is absolutely delicious! It's now a family favorite!",
+        "date": "2024-12-25T08:30:00Z"
+      }
+    ],
+    "favorites": 200,
+    "categories": "Italian"
+  },
+  {
+    "title": "Lasagna Bolognese",
+    "image": "https://i0.wp.com/cookingitalians.com/wp-content/uploads/2024/11/Lasagna-alla-Bolognese.jpg?fit=1344%2C768&ssl=1",
+    "description": "A hearty and layered dish with Bolognese sauce, béchamel, and pasta sheets.",
+    "method": [
+      "Prepare Bolognese sauce by simmering ground beef, tomatoes, and seasonings.",
+      "Make béchamel sauce by whisking butter, flour, and milk.",
+      "Layer pasta sheets, Bolognese, béchamel, and cheese in a baking dish.",
+      "Bake at 375°F (190°C) for 45 minutes until golden and bubbly."
+    ],
+    "ingredients": [
+      { "name": "Ground beef", "quantity": "500g" },
+      { "name": "Lasagna sheets", "quantity": "12" },
+      { "name": "Tomato sauce", "quantity": "2 cups" },
+      { "name": "Béchamel sauce", "quantity": "2 cups" },
+      { "name": "Mozzarella cheese", "quantity": "200g, shredded" }
+    ],
+    "servings": 6,
+    "author_id": "6771dc99aef7a6de66a246bc",
+    "reviews": [
+      {
+        "reviewer_id": "6771e203aef7a6de66a246cc",
+        "rating": 4,
+        "reviewText": "Tasted great! A little more cheese would've added extra flavor, but I enjoyed it.",
+        "date": "2024-12-25T08:30:00Z"
+      }
+    ],
+    "favorites": 180,
+    "categories": "Italian"
+  },
+  {
+    "title": "Eggplant Parmigiana",
+    "image": "https://www.eatingwell.com/thmb/AADqyJzanmxhohPE6ieAi4okuQo=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Extra-CrispyEggplantParmesan-Beauty-01-89d65a140a3640e3aba7b80ad8865dba.jpg",
+    "description": "A delicious and hearty Italian dish featuring layers of eggplant, tomato sauce, and cheese.",
+    "method": [
+      "Slice eggplants into 1/4-inch rounds and sprinkle with salt. Let them rest for 30 minutes to remove bitterness, then rinse and pat dry.",
+      "Coat eggplant slices in flour, dip in beaten eggs, and fry in hot oil until golden. Drain on paper towels.",
+      "Spread a thin layer of tomato sauce in a baking dish, then layer fried eggplant, mozzarella slices, Parmesan, and more sauce.",
+      "Repeat layers until ingredients are used up, finishing with cheese on top.",
+      "Bake at 375°F (190°C) for 30-35 minutes until bubbly and golden on top. Let rest for 10 minutes before serving."
+    ],
+    "ingredients": [
+      { "name": "Eggplants", "quantity": "2 large" },
+      { "name": "Tomato sauce", "quantity": "2 cups" },
+      { "name": "Mozzarella cheese", "quantity": "250g, sliced" },
+      { "name": "Parmesan cheese", "quantity": "1 cup, grated" },
+      { "name": "Flour", "quantity": "1 cup" },
+      { "name": "Eggs", "quantity": "2, beaten" },
+      { "name": "Olive oil", "quantity": "for frying" },
+      { "name": "Salt", "quantity": "to taste" }
+    ],
+    "servings": 4,
+    "author_id": "6771dccaaef7a6de66a246be",
+    "reviews": [
+      {
+        "reviewer_id": "6771e203aef7a6de66a246cc",
+        "rating": 4,
+        "reviewText": "Tasted great! A little more saffron would've added extra flavor, but still loved it.",
+        "date": "2024-12-25T08:30:00Z"
+      }
+    ],
+    "favorites": 180,
+    "categories": "Italian"
+  },
+  {
+    "title": "Mutton Biryani",
+    "image": "https://www.apnachef.com/wp-content/uploads/2024/01/mutton-biryani-50-people-wide.jpg",
+    "description": "A fragrant and flavorful rice dish made with tender mutton pieces, basmati rice, and a blend of aromatic spices. This Bengali version of Mutton Biryani is rich, mildly spiced, and often served with raita or salad.",
+    "method": [
+      "In a large bowl, combine the mutton pieces with yogurt, ginger-garlic paste, red chili powder, turmeric, cumin powder, coriander powder, garam masala, salt, lemon juice, and mustard oil.",
+      "Mix well, cover, and let it marinate for at least 2 hours, preferably overnight in the refrigerator.",
+      "Wash the basmati rice thoroughly and soak it for 30 minutes.",
+      "In a large pot, bring water to a boil, add salt, and drop in the whole spices (bay leaf, cloves, cardamom, cinnamon, black peppercorns).",
+      "Add the soaked rice to the boiling water and cook it until it's 70% done (al dente texture). Drain the rice and set aside.",
+      "Heat 2 tablespoons of ghee in a pan and fry the thinly sliced onions until golden brown and crispy. Set aside for garnish.",
+      "In a large, heavy-bottomed pot, heat 1 tablespoon of ghee and sauté the ginger-garlic paste until fragrant.",
+      "Add the marinated mutton pieces and sear them until they are browned on all sides.",
+      "Add chopped tomatoes, green chilies, and cook for 10-15 minutes until the tomatoes soften and the mutton is tender.",
+      "Add a little water if needed to prevent the mutton from burning. Once the mutton is cooked and the gravy thickens, remove from heat.",
+      "In the same pot, start layering the biryani with rice and mutton, alternating layers. Sprinkle mint leaves, coriander leaves, and fried onions on top.",
+      "Drizzle some saffron milk and ghee over the top layer of rice.",
+      "Cover the pot with a tight-fitting lid and cook on low heat for 20-25 minutes (dum cooking).",
+      "Alternatively, you can place the pot in a preheated oven at 180°C for 20 minutes.",
+      "Gently fluff the biryani before serving. Garnish with fresh mint and coriander leaves and fried onions."
+    ],
+    "ingredients": [
+      { "name": "Mutton (bone-in)", "quantity": "500g" },
+      { "name": "Yogurt", "quantity": "1/2 cup" },
+      { "name": "Ginger-garlic paste", "quantity": "2 tbsp" },
+      { "name": "Red chili powder", "quantity": "1 tsp" },
+      { "name": "Turmeric powder", "quantity": "1/2 tsp" },
+      { "name": "Cumin powder", "quantity": "1 tsp" },
+      { "name": "Coriander powder", "quantity": "1 tsp" },
+      { "name": "Garam masala", "quantity": "1 tsp" },
+      { "name": "Salt", "quantity": "to taste" },
+      { "name": "Lemon juice", "quantity": "1 tbsp" },
+      { "name": "Mustard oil", "quantity": "2 tbsp" },
+      { "name": "Basmati rice", "quantity": "2 cups" },
+      {
+        "name": "Whole spices (bay leaf, cloves, cardamom, cinnamon, black peppercorns)",
+        "quantity": "2-3 of each"
+      },
+      { "name": "Ghee", "quantity": "1 tbsp" },
+      { "name": "Onion (thinly sliced)", "quantity": "2 large" },
+      { "name": "Tomatoes (chopped)", "quantity": "2 medium" },
+      { "name": "Green chilies (slit)", "quantity": "3-4" },
+      { "name": "Mint leaves", "quantity": "1/4 cup" },
+      { "name": "Coriander leaves (chopped)", "quantity": "1/4 cup" },
+      {
+        "name": "Saffron strands",
+        "quantity": "a pinch (optional, soaked in milk)"
+      }
+    ],
+    "servings": 4,
+    "author_id": "6771dd03aef7a6de66a246c0",
+    "reviews": [
+      {
+        "reviewer_id": "6771e18eaef7a6de66a246ca",
+        "rating": 5,
+        "reviewText": "Absolutely delicious! The spices are perfectly balanced and the mutton is so tender.",
+        "date": "2024-12-26T10:00:00Z"
+      }
+    ],
+    "favorites": 12,
+    "categories": "Asian"
+  },
+  {
+    "title": "Chicken Kabab",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvSpCLSrhVG5mfsdF-Yb98VuhJ4lddoiBdJw&s",
+    "description": "A deliciously spiced Bengali-style Chicken Kabab, marinated in yogurt and a variety of spices, then grilled to perfection. This dish is perfect for a smoky, tender chicken snack or appetizer.",
+    "method": [
+      "In a large mixing bowl, combine the chicken pieces with yogurt, ginger-garlic paste, red chili powder, turmeric powder, garam masala, cumin powder, coriander powder, and salt.",
+      "Add lemon juice and mustard oil, then mix everything thoroughly. Let it marinate for at least 2 hours, preferably overnight for enhanced flavor.",
+      "Preheat the grill or oven to 200°C (400°F). If using a grill, grease the grill rack lightly with oil.",
+      "Thread the marinated chicken pieces onto skewers, leaving some space between the pieces.",
+      "Grill the kababs for about 15-20 minutes, turning occasionally, until the chicken is fully cooked and has a nice char.",
+      "Alternatively, bake the kababs in a preheated oven on a baking sheet for 25-30 minutes, flipping halfway through.",
+      "Once cooked, remove from the skewers and garnish with chopped mint leaves, onions, and a squeeze of lemon juice.",
+      "Serve hot with a side of green chutney or your favorite sauce."
+    ],
+    "ingredients": [
+      { "name": "Chicken (boneless, cut into pieces)", "quantity": "500g" },
+      { "name": "Yogurt", "quantity": "1/2 cup" },
+      { "name": "Ginger-garlic paste", "quantity": "2 tbsp" },
+      { "name": "Red chili powder", "quantity": "1 tsp" },
+      { "name": "Turmeric powder", "quantity": "1/2 tsp" },
+      { "name": "Garam masala", "quantity": "1 tsp" },
+      { "name": "Cumin powder", "quantity": "1/2 tsp" },
+      { "name": "Coriander powder", "quantity": "1/2 tsp" },
+      { "name": "Salt", "quantity": "to taste" },
+      { "name": "Lemon juice", "quantity": "1 tbsp" },
+      { "name": "Mustard oil", "quantity": "1 tbsp" },
+      { "name": "Chopped mint leaves", "quantity": "1/4 cup (for garnish)" },
+      { "name": "Onions (sliced, for garnish)", "quantity": "1 large" },
+      { "name": "Lemon wedges", "quantity": "for serving" }
+    ],
+    "servings": 4,
+    "author_id": "6771db9faef7a6de66a246b4",
+    "reviews": [
+      {
+        "reviewer_id": "6771e0c4aef7a6de66a246c6",
+        "rating": 5,
+        "reviewText": "The kababs were so juicy and full of flavor! I love the smoky taste from grilling them. Definitely making this again.",
+        "date": "2024-12-26T10:15:00Z"
+      },
+      {
+        "reviewer_id": "6771e203aef7a6de66a246cc",
+        "rating": 4,
+        "reviewText": "Delicious kababs! I wish the marination had a bit more spice, but they were still fantastic.",
+        "date": "2024-12-24T18:45:00Z"
+      }
+    ],
+    "favorites": 25,
+    "categories": "Asian"
+  },
+  {
+    "title": "Grilled Steak with Herb Butter",
+    "image": "https://i.ytimg.com/vi/-VvaCU8muFA/maxresdefault.jpg",
+    "description": "A succulent grilled steak served with a rich herb butter. Perfectly seasoned and seared to your preference, this steak recipe is sure to impress.",
+    "method": [
+      "Preheat the grill or pan to high heat. Ensure the steak is at room temperature before grilling.",
+      "Season the steak generously with salt, black pepper, and olive oil on both sides.",
+      "Place the steak on the grill or in the pan. Cook for 4-5 minutes on each side for medium-rare, or longer for your preferred doneness.",
+      "While the steak is cooking, prepare the herb butter by mixing softened butter with minced garlic, chopped parsley, thyme, and a pinch of salt.",
+      "Once the steak is done, remove it from the grill and let it rest for a few minutes to retain its juices.",
+      "Top the steak with a dollop of herb butter and serve immediately.",
+      "Pair with your favorite side dish, such as roasted vegetables or mashed potatoes."
+    ],
+    "ingredients": [
+      {
+        "name": "Steak (your choice of cut, e.g., ribeye, sirloin)",
+        "quantity": "2 steaks (approx. 200-250g each)"
+      },
+      { "name": "Olive oil", "quantity": "2 tbsp" },
+      { "name": "Salt", "quantity": "to taste" },
+      { "name": "Black pepper", "quantity": "to taste" },
+      { "name": "Garlic (minced)", "quantity": "2 cloves" },
+      { "name": "Fresh parsley (chopped)", "quantity": "2 tbsp" },
+      { "name": "Fresh thyme (chopped)", "quantity": "1 tbsp" },
+      { "name": "Butter (softened)", "quantity": "1/4 cup" }
+    ],
+    "servings": 2,
+    "author_id": "6771dbd6aef7a6de66a246b6",
+    "reviews": [
+      {
+        "reviewer_id": "6771e0c4aef7a6de66a246c6",
+        "rating": 5,
+        "reviewText": "Absolutely perfect steak! The herb butter adds such a wonderful richness. Will definitely make this again.",
+        "date": "2024-12-25T14:30:00Z"
+      },
+      {
+        "reviewer_id": "6771e114aef7a6de66a246c8",
+        "rating": 4,
+        "reviewText": "The steak was delicious, but I think it could use a bit more seasoning. The herb butter was a great touch.",
+        "date": "2024-12-23T19:10:00Z"
+      }
+    ],
+    "favorites": 40,
+    "categories": "Asian"
+  },
+  {
+    "title": "Garlic Butter Lobster Tail",
+    "image": "https://t3.ftcdn.net/jpg/05/85/81/14/360_F_585811468_YsbGY2xhp7clf1HVqk3E9u54eSs9t6Rz.jpg",
+    "description": "A luxurious and simple recipe for lobster tail, cooked with garlic butter and fresh herbs. Perfectly tender and full of flavor, this dish is a seafood lover’s dream.",
+    "method": [
+      "Preheat the oven to 400°F (200°C).",
+      "Using kitchen shears, cut along the top of the lobster shell and gently pull it apart to expose the lobster meat. Leave the meat attached at the base of the tail.",
+      "In a small bowl, melt the butter and add minced garlic, lemon juice, parsley, salt, and black pepper. Mix well.",
+      "Brush the lobster meat with the garlic butter mixture, ensuring the meat is well-coated.",
+      "Place the lobster tails on a baking sheet and bake for 12-15 minutes, or until the lobster meat is opaque and tender.",
+      "Once cooked, remove from the oven and drizzle with more garlic butter. Serve with lemon wedges and fresh herbs for garnish."
+    ],
+    "ingredients": [
+      { "name": "Lobster tails", "quantity": "2 tails (6-8 oz each)" },
+      { "name": "Butter (melted)", "quantity": "1/4 cup" },
+      { "name": "Garlic (minced)", "quantity": "2 cloves" },
+      { "name": "Lemon juice", "quantity": "1 tbsp" },
+      { "name": "Fresh parsley (chopped)", "quantity": "2 tbsp" },
+      { "name": "Salt", "quantity": "to taste" },
+      { "name": "Black pepper", "quantity": "to taste" },
+      { "name": "Lemon wedges", "quantity": "for garnish" }
+    ],
+    "servings": 2,
+    "author_id": "6771dc0aaef7a6de66a246b8",
+    "reviews": [
+      {
+        "reviewer_id": "6771e114aef7a6de66a246c8",
+        "rating": 5,
+        "reviewText": "This was absolutely amazing! The lobster was perfectly tender and the garlic butter made it so flavorful. Highly recommend!",
+        "date": "2024-12-24T16:30:00Z"
+      },
+      {
+        "reviewer_id": "6771e203aef7a6de66a246cc",
+        "rating": 4,
+        "reviewText": "Really great recipe. The lobster came out perfectly cooked. I added a bit more lemon for extra zing!",
+        "date": "2024-12-22T11:50:00Z"
+      }
+    ],
+    "favorites": 25,
+    "categories": "Asian"
+  },
+  {
+    "title": "Classic Caesar Salad",
+    "image": "https://img.freepik.com/premium-photo/caesar-salad-with-shrimps-black-background_210632-2733.jpg",
+    "description": "A timeless salad made with fresh romaine lettuce, crunchy croutons, creamy Caesar dressing, and topped with parmesan cheese.",
+    "method": [
+      "Tear the romaine lettuce into bite-sized pieces and place it in a large bowl.",
+      "Add the croutons and grated parmesan cheese.",
+      "Drizzle with Caesar dressing and toss until everything is well coated.",
+      "Serve immediately, garnished with extra parmesan if desired."
+    ],
+    "ingredients": [
+      { "name": "Romaine lettuce", "quantity": "4 cups" },
+      { "name": "Croutons", "quantity": "1 cup" },
+      { "name": "Parmesan cheese (grated)", "quantity": "1/2 cup" },
+      { "name": "Caesar dressing", "quantity": "1/4 cup" }
+    ],
+    "servings": 4,
+    "author_id": "6771d77caef7a6de66a246b0",
+    "reviews": [
+      {
+        "reviewer_id": "6771e18eaef7a6de66a246ca",
+        "rating": 5,
+        "reviewText": "A classic salad that's always a hit. The dressing is just perfect!",
+        "date": "2024-12-20T14:00:00Z"
+      }
+    ],
+    "favorites": 50,
+    "categories": "Salad"
+  },
+  {
+    "title": "Greek Salad",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtIsJ43s5AJFXxURRz-_MKwQ11ByT_JhZ96Q&s",
+    "description": "A refreshing salad made with ripe tomatoes, cucumber, red onion, olives, and feta cheese, tossed in olive oil and herbs.",
+    "method": [
+      "Chop the tomatoes, cucumber, and red onion into bite-sized pieces.",
+      "Add the olives and crumbled feta cheese.",
+      "Drizzle with olive oil and sprinkle with oregano, salt, and pepper.",
+      "Toss gently and serve chilled."
+    ],
+    "ingredients": [
+      { "name": "Tomatoes", "quantity": "2 medium" },
+      { "name": "Cucumber", "quantity": "1" },
+      { "name": "Red onion", "quantity": "1/2" },
+      { "name": "Olives (black or Kalamata)", "quantity": "1/2 cup" },
+      { "name": "Feta cheese", "quantity": "1/4 cup" },
+      { "name": "Olive oil", "quantity": "2 tbsp" },
+      { "name": "Oregano", "quantity": "1 tsp" }
+    ],
+    "servings": 4,
+    "author_id": "6771dc0aaef7a6de66a246b8",
+    "reviews": [
+      {
+        "reviewer_id": "6771e0c4aef7a6de66a246c6",
+        "rating": 4,
+        "reviewText": "Delicious and fresh! Perfect for a summer meal.",
+        "date": "2024-12-18T10:30:00Z"
+      }
+    ],
+    "favorites": 40,
+    "categories": "Salad"
+  },
+  {
+    "title": "Cobb Salad",
+    "image": "https://img.freepik.com/premium-photo/enhance-health-experience-with-tasty-cobb-salad-bowl-isolated-black-background-generative-ai_927930-445.jpg",
+    "description": "A hearty and filling salad with mixed greens, chicken, bacon, avocado, hard-boiled eggs, and blue cheese.",
+    "method": [
+      "Cook and chop the chicken breast, bacon, and hard-boiled eggs.",
+      "Chop the lettuce and arrange it on a large platter.",
+      "Top with chicken, bacon, avocado, eggs, and blue cheese.",
+      "Drizzle with your choice of dressing and serve."
+    ],
+    "ingredients": [
+      { "name": "Chicken breast (cooked and chopped)", "quantity": "1" },
+      { "name": "Bacon (cooked and crumbled)", "quantity": "3 strips" },
+      { "name": "Avocado", "quantity": "1" },
+      { "name": "Hard-boiled eggs", "quantity": "2" },
+      { "name": "Blue cheese", "quantity": "1/4 cup" },
+      { "name": "Mixed greens", "quantity": "4 cups" }
+    ],
+    "servings": 4,
+    "author_id": "6771db6baef7a6de66a246b2",
+    "reviews": [
+      {
+        "reviewer_id": "6771e18eaef7a6de66a246ca",
+        "rating": 5,
+        "reviewText": "Such a satisfying salad! Perfect as a meal or a side.",
+        "date": "2024-12-19T16:15:00Z"
+      }
+    ],
+    "favorites": 30,
+    "categories": "Salad"
+  },
+  {
+    "title": "Caprese Salad",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVHPW4gmaVzp6aZFs--nNv5S3oPwG6fv5pBQ&s",
+    "description": "A simple and elegant Italian salad made with fresh mozzarella, tomatoes, basil, and a drizzle of balsamic glaze.",
+    "method": [
+      "Slice the tomatoes and mozzarella cheese.",
+      "Arrange the slices in an alternating pattern on a plate.",
+      "Tear fresh basil leaves and scatter them over the salad.",
+      "Drizzle with olive oil and balsamic glaze, and season with salt and pepper."
+    ],
+    "ingredients": [
+      { "name": "Tomatoes", "quantity": "2 medium" },
+      { "name": "Fresh mozzarella cheese", "quantity": "1 ball" },
+      { "name": "Fresh basil leaves", "quantity": "1/4 cup" },
+      { "name": "Balsamic glaze", "quantity": "1 tbsp" },
+      { "name": "Olive oil", "quantity": "1 tbsp" }
+    ],
+    "servings": 2,
+    "author_id": "6771dbd6aef7a6de66a246b6",
+    "reviews": [
+      {
+        "reviewer_id": "6771e114aef7a6de66a246c8",
+        "rating": 5,
+        "reviewText": "So fresh and tasty! The perfect summer dish.",
+        "date": "2024-12-21T12:00:00Z"
+      }
+    ],
+    "favorites": 60,
+    "categories": "Salad"
+  },
+  {
+    "title": "Chocolate Lava Cake",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQas3JjBDC6TOnnwgMS_p5pvW9Pp8bKX1XTug&s",
+    "description": "A rich and gooey chocolate cake with a molten center.",
+    "method": [
+      "Preheat the oven to 425°F (220°C). Grease ramekins with butter and dust with cocoa powder.",
+      "Melt the chocolate and butter together in a double boiler.",
+      "Whisk eggs, egg yolks, and sugar until light and fluffy.",
+      "Fold the chocolate mixture into the egg mixture.",
+      "Sift in flour and gently mix until combined.",
+      "Pour the batter into ramekins and bake for 12-14 minutes.",
+      "Let cool for a minute, then invert onto a plate. Serve warm."
+    ],
+    "ingredients": [
+      { "name": "Dark Chocolate", "quantity": "200g" },
+      { "name": "Unsalted Butter", "quantity": "100g" },
+      { "name": "Eggs", "quantity": "2" },
+      { "name": "Egg Yolks", "quantity": "2" },
+      { "name": "Sugar", "quantity": "1/4 cup" },
+      { "name": "All-Purpose Flour", "quantity": "1/4 cup" },
+      { "name": "Butter (for greasing)", "quantity": "As needed" },
+      { "name": "Cocoa Powder (for dusting)", "quantity": "As needed" }
+    ],
+    "servings": 4,
+    "author_id": "6771dc0aaef7a6de66a246b8",
+    "reviews": [
+      {
+        "reviewer_id": "6771e0c4aef7a6de66a246c6",
+        "rating": 5,
+        "reviewText": "Absolutely divine! The gooey center is heavenly.",
+        "date": "2024-12-26"
+      },
+      {
+        "reviewer_id": "6771e114aef7a6de66a246c8",
+        "rating": 4,
+        "reviewText": "Tasted amazing, but I overbaked mine. Still great though!",
+        "date": "2024-12-24"
+      }
+    ],
+    "favorites": 320,
+    "categories": "Dessert"
+  },
+  {
+    "title": "Classic Tiramisu",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAZHAsl6M4id5AKpWSCrbJUT9Ev3SOGHnPXw&s",
+    "description": "Layers of coffee-soaked ladyfingers and mascarpone cream.",
+    "method": [
+      "Whisk egg yolks and sugar until creamy.",
+      "Fold in mascarpone cheese and whipped cream.",
+      "Layer with coffee-soaked ladyfingers and chill."
+    ],
+    "ingredients": [
+      { "name": "Ladyfingers", "quantity": "24" },
+      { "name": "Espresso", "quantity": "1 cup" },
+      { "name": "Mascarpone Cheese", "quantity": "1 1/4 cups" },
+      { "name": "Egg Yolks", "quantity": "4" },
+      { "name": "Sugar", "quantity": "1/2 cup" },
+      { "name": "Whipped Cream", "quantity": "1 cup" }
+    ],
+    "servings": 6,
+    "author_id": "6771db6baef7a6de66a246b2",
+    "reviews": [
+      {
+        "reviewer_id": "6771e203aef7a6de66a246cc",
+        "rating": 5,
+        "reviewText": "The perfect balance of coffee and creaminess!",
+        "date": "2024-12-15"
+      }
+    ],
+    "favorites": 300,
+    "categories": "Dessert"
+  },
+  {
+    "title": "Strawberry Shortcake",
+    "image": "https://www.firstplaceforhealth.com/wp-content/uploads/2024/09/Strawberry-Shortcake-AI-300x300_c.jpg",
+    "description": "A delightful dessert with layers of shortcake, whipped cream, and fresh strawberries.",
+    "method": [
+      "Bake the shortcake layers.",
+      "Slice strawberries and mix with sugar.",
+      "Layer shortcake with whipped cream and strawberries."
+    ],
+    "ingredients": [
+      { "name": "Shortcake", "quantity": "2 layers" },
+      { "name": "Strawberries", "quantity": "2 cups" },
+      { "name": "Sugar", "quantity": "2 tbsp" },
+      { "name": "Whipped Cream", "quantity": "1 cup" }
+    ],
+    "servings": 6,
+    "author_id": "6771dc4eaef7a6de66a246ba",
+    "reviews": [
+      {
+        "reviewer_id": "6771e18eaef7a6de66a246ca",
+        "rating": 5,
+        "reviewText": "A refreshing and light dessert!",
+        "date": "2024-12-22"
+      }
+    ],
+    "favorites": 120,
+    "categories": "Dessert"
+  },
+  {
+    "title": "Banoffee Pie",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3_-gJ_CeBY75z7EEGmce-Y6BoeOoE8I4gXA&s",
+    "description": "A decadent dessert with layers of banana, toffee, and whipped cream.",
+    "method": [
+      "Prepare the crust with crushed biscuits and butter.",
+      "Spread toffee over the crust.",
+      "Top with sliced bananas and whipped cream."
+    ],
+    "ingredients": [
+      { "name": "Biscuit Crumbs", "quantity": "2 cups" },
+      { "name": "Butter", "quantity": "1/2 cup" },
+      { "name": "Toffee Sauce", "quantity": "1 cup" },
+      { "name": "Bananas", "quantity": "3" },
+      { "name": "Whipped Cream", "quantity": "1 cup" }
+    ],
+    "servings": 8,
+    "author_id": "6771dccaaef7a6de66a246be",
+    "reviews": [
+      {
+        "reviewer_id": "6771e0c4aef7a6de66a246c6",
+        "rating": 5,
+        "reviewText": "Heavenly! Everyone loved it.",
+        "date": "2024-12-23"
+      }
+    ],
+    "favorites": 250,
+    "categories": "Dessert"
+  },
+  {
+    "title": "Beef Enchiladas",
+    "image": "https://brandsitesplatform-res.cloudinary.com/image/fetch/w_1540,c_scale,q_auto:eco,f_auto,fl_lossy,dpr_1.0,e_sharpen:85/https://assets.brandplatform.generalmills.com%2F-%2Fmedia%2Fproject%2Fgmi%2Foldelpaso%2Foldelpaso-us%2Frecipes%2Fsv1m0wquruexfsx_l87eag_gmi_hi_res_jpeg.jpeg%3F%201540w",
+    "description": "Hearty enchiladas filled with seasoned beef and topped with rich enchilada sauce.",
+    "method": [
+      "Cook ground beef with onions, garlic, and spices.",
+      "Fill tortillas with beef mixture and roll them up.",
+      "Place in a baking dish, cover with enchilada sauce, and sprinkle with cheese.",
+      "Bake at 375°F (190°C) for 20 minutes."
+    ],
+    "ingredients": [
+      { "name": "Ground Beef", "quantity": "1 lb" },
+      { "name": "Onion", "quantity": "1 diced" },
+      { "name": "Garlic", "quantity": "2 cloves minced" },
+      { "name": "Tortillas", "quantity": "8 medium" },
+      { "name": "Enchilada Sauce", "quantity": "2 cups" },
+      { "name": "Cheddar Cheese", "quantity": "1 cup grated" }
+    ],
+    "servings": 4,
+    "author_id": "6771dd03aef7a6de66a246c0",
+    "reviews": [
+      {
+        "reviewer_id": "6771e203aef7a6de66a246cc",
+        "rating": 4,
+        "reviewText": "Rich and satisfying, a great dinner option.",
+        "date": "2024-12-20"
+      }
+    ],
+    "favorites": 410,
+    "categories": "Mexican"
+  },
+  {
+    "title": "Mexican Rice",
+    "image": "https://www.connoisseurusveg.com/wp-content/uploads/2024/04/black-beans-mexican-rice-sq.jpg",
+    "description": "Fluffy rice cooked with tomatoes, onions, and spices.",
+    "method": [
+      "Sauté onions and garlic in oil.",
+      "Add rice and toast lightly.",
+      "Mix in tomato sauce, chicken broth, and spices.",
+      "Simmer until rice is cooked and fluffy."
+    ],
+    "ingredients": [
+      { "name": "Rice", "quantity": "1 cup" },
+      { "name": "Onion", "quantity": "1/2 cup diced" },
+      { "name": "Garlic", "quantity": "2 cloves minced" },
+      { "name": "Tomato Sauce", "quantity": "1/2 cup" },
+      { "name": "Chicken Broth", "quantity": "2 cups" },
+      { "name": "Cumin", "quantity": "1 tsp" }
+    ],
+    "servings": 4,
+    "author_id": "6771d77caef7a6de66a246b0",
+    "reviews": [
+      {
+        "reviewer_id": "6771e0c4aef7a6de66a246c6",
+        "rating": 5,
+        "reviewText": "A must-have side dish for any Mexican meal.",
+        "date": "2024-12-21"
+      }
+    ],
+    "favorites": 500,
+    "categories": "Mexican"
+  },
+  {
+    "title": "Chicken Quesadilla",
+    "image": "https://t3.ftcdn.net/jpg/09/21/54/52/360_F_921545268_fqLyWx4gzjjHE1KO0qaDQzba5PtXAGYK.jpg",
+    "description": "A crispy tortilla filled with melted cheese, tender chicken, and flavorful spices.",
+    "method": [
+      "Heat a skillet over medium heat and cook the chicken with taco seasoning until fully cooked. Shred or dice the chicken.",
+      "Place a tortilla in the skillet and sprinkle a layer of shredded cheese over half of the tortilla.",
+      "Add cooked chicken, diced bell peppers, and onions on top of the cheese.",
+      "Fold the tortilla in half and cook for 2-3 minutes per side, until golden brown and the cheese is melted.",
+      "Slice into wedges and serve with sour cream, guacamole, or salsa."
+    ],
+    "ingredients": [
+      { "name": "Tortillas", "quantity": "4 large" },
+      { "name": "Chicken Breast", "quantity": "2 pieces, cooked and shredded" },
+      { "name": "Shredded Cheese", "quantity": "2 cups" },
+      { "name": "Bell Peppers", "quantity": "1/2 cup diced" },
+      { "name": "Onion", "quantity": "1/4 cup diced" },
+      { "name": "Taco Seasoning", "quantity": "2 tbsp" },
+      { "name": "Oil or Butter", "quantity": "1 tbsp" }
+    ],
+    "servings": 4,
+    "author_id": "6771dd03aef7a6de66a246c0",
+    "reviews": [
+      {
+        "reviewer_id": "6771e18eaef7a6de66a246ca",
+        "rating": 5,
+        "reviewText": "So easy to make and tastes amazing!",
+        "date": "2024-12-26"
+      },
+      {
+        "reviewer_id": "6771e114aef7a6de66a246c8",
+        "rating": 4,
+        "reviewText": "Great recipe, but I added extra seasoning for more flavor.",
+        "date": "2024-12-25"
+      }
+    ],
+    "favorites": 370,
+    "categories": "Mexican"
+  },
+  {
+    "title": "Pozole",
+    "image": "https://www.zenbelly.com/wp-content/uploads/2020/09/pozole-3-scaled.jpg",
+    "description": "A traditional Mexican soup with hominy, pork, and flavorful broth.",
+    "step": [
+      "Cook pork in a pot with onions, garlic, and spices until tender.",
+      "Add hominy and simmer for 30 minutes.",
+      "Serve hot with toppings like radishes, lime, and cabbage."
+    ],
+    "ingredients": [
+      { "name": "Pork Shoulder", "quantity": "2 lbs" },
+      { "name": "Hominy", "quantity": "2 cups" },
+      { "name": "Onion", "quantity": "1 diced" },
+      { "name": "Garlic", "quantity": "3 cloves minced" },
+      { "name": "Cumin", "quantity": "1 tsp" },
+      { "name": "Chili Powder", "quantity": "1 tbsp" }
+    ],
+    "servings": 6,
+    "author_id": "6771dd03aef7a6de66a246c0",
+    "reviews": [
+      {
+        "reviewer_id": "6771e203aef7a6de66a246cc",
+        "rating": 5,
+        "reviewText": "Authentic and full of flavor!",
+        "date": "2024-12-19"
+      }
+    ],
+    "favorites": 430,
+    "categories": "Mexican"
+  }
+]
