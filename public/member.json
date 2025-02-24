@@ -1,0 +1,103 @@
+[
+    {
+      "name": "Shimu Ziasmin",
+      "position": "Management",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2txBkshXb1GfDZ60HRZoMw8j7RoTs2WYNCw&s",
+      "bio": "Shimu is the CEO with 15 years of experience in business leadership.",
+      "socialLinks": {
+        "linkedin": "https://linkedin.com/in/shimu",
+        "twitter": "https://twitter.com/shimu"
+      }
+    },
+    {
+      "name": "Bob Smith",
+      "position": "Management",
+      "image": "https://img.freepik.com/premium-photo/photo-happy-businessman-standing-with-arms-crossed-isolated-white-background_457222-6736.jpg",
+      "bio": "Bob oversees daily operations, ensuring smooth business processes.",
+      "socialLinks": {
+        "linkedin": "https://linkedin.com/in/bobsmith",
+        "twitter": "https://twitter.com/bobsmith"
+      }
+    },
+    {
+      "name": "Sarah Johnson",
+      "position": "Production",
+      "image": "https://assets.alot.com/assets/common/entertainment/u19835_slide_11885.jpg",
+      "bio": "Charlie leads the production team, ensuring top-quality products.",
+      "socialLinks": {
+        "linkedin": "https://linkedin.com/in/charliedavis",
+        "twitter": "https://twitter.com/charliedavis"
+      }
+    },
+    {
+      "name": "Diana Prince",
+      "position": "Production",
+      "image": "https://img.freepik.com/premium-photo/woman-with-her-arms-crossed-front-white-background_564692-17664.jpg",
+      "bio": "Diana is an expert in manufacturing and product development.",
+      "socialLinks": {
+        "linkedin": "https://linkedin.com/in/dianaprince",
+        "twitter": "https://twitter.com/dianaprince"
+      }
+    },
+    {
+      "name": "Ethan Brown",
+      "position": "Marketing",
+      "image": "https://static.vecteezy.com/system/resources/previews/029/330/448/non_2x/ai-generative-business-man-in-a-suit-white-transparent-background-free-photo.jpg",
+      "bio": "Ethan develops marketing strategies to boost brand awareness.",
+      "socialLinks": {
+        "linkedin": "https://linkedin.com/in/ethanbrown",
+        "twitter": "https://twitter.com/ethanbrown"
+      }
+    },
+    {
+      "name": "Fiona White",
+      "position": "Marketing",
+      "image": "https://img.freepik.com/premium-photo/business-woman-blue-suit-white-background_564692-62818.jpg",
+      "bio": "Fiona specializes in digital marketing and social media campaigns.",
+      "socialLinks": {
+        "linkedin": "https://linkedin.com/in/fionawhite",
+        "twitter": "https://twitter.com/fionawhite"
+      }
+    },
+    {
+      "name": "George Miller",
+      "position": "Sales",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2szF3xX_rO0AMLuxoc7ouxF5n6nknOMArjQ&s",
+      "bio": "George is a top-performing sales executive with 10 years of experience.",
+      "socialLinks": {
+        "linkedin": "https://linkedin.com/in/georgemiller",
+        "twitter": "https://twitter.com/georgemiller"
+      }
+    },
+    {
+      "name": "Hannah Lee",
+      "position": "Sales",
+      "image": "https://img.freepik.com/premium-photo/young-smilling-business-woman-posing-isolated-white-background-generative-ai_947762-804.jpg",
+      "bio": "Hannah specializes in client relations and increasing revenue.",
+      "socialLinks": {
+        "linkedin": "https://linkedin.com/in/hannahlee",
+        "twitter": "https://twitter.com/hannahlee"
+      }
+    },
+    {
+      "name": "Isaac Wilson",
+      "position": "Operations",
+      "image": "https://img.freepik.com/premium-photo/portrait-cute-young-business-man-white-background_1103909-31999.jpg",
+      "bio": "Isaac ensures smooth logistics and workflow efficiency.",
+      "socialLinks": {
+        "linkedin": "https://linkedin.com/in/isaacwilson",
+        "twitter": "https://twitter.com/isaacwilson"
+      }
+    },
+    {
+      "name": "Julia Roberts",
+      "position": "Operations",
+      "image": "https://img.freepik.com/premium-photo/business-woman-with-white-background-high-quality_889056-97828.jpg?w=360",
+      "bio": "Julia focuses on optimizing company operations and strategies.",
+      "socialLinks": {
+        "linkedin": "https://linkedin.com/in/juliaroberts",
+        "twitter": "https://twitter.com/juliaroberts"
+      }
+    }
+  ]
+  

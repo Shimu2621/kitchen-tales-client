@@ -1,4 +1,3 @@
-import React from "react";
 import videoBanner from "../../../assets/videoBanner.mp4";
 import Lottie from "lottie-react";
 import chefanimation from "../../../../public/Chef.json";
@@ -31,7 +30,7 @@ const VideoBanner = () => {
             discover new flavors every day!
           </p>
           {/* Button */}
-          <button class="flex items-center btn  text-amber-950 text-lg font-cursive bg-orange-300 hover:text-white hover:bg-amber-700 ">
+          <button className="flex items-center btn  text-amber-950 text-lg font-cursive bg-orange-300 hover:text-white hover:bg-amber-700 ">
             <img className="w-8 h-8" src={recipeBook} alt="" />
             Explore Recipes
             <img className="w-6 h-6 pt-1" src={arrowIcon} alt="" />

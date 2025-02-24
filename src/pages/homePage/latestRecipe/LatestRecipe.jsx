@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Container from "../../../utils/container/Container";
 import cookBook from "../../../../public/images/cookbook.png";
 import axios from "axios";
 import { Link } from "react-router";
+import recipeBook from "../../../../public/images/cook-book.png";
+import arrowIcon from "../../../../public/images/right-arrow (1).png";
 // Rating
 import { Rating } from "@smastrom/react-rating";
 
@@ -49,23 +51,23 @@ const categories = [
     image: "https://img.icons8.com/color/96/000000/noodles.png",
   },
 ];
+// Tilt
+const defaultOptions = {
+  reverse: false,
+  max: 20,
+  perspective: 1000,
+  scale: 1,
+  speed: 900,
+  transition: true,
+  axis: null,
+  reset: true,
+  easing: "cubic-bezier(.03,.98,.52,.99)",
+};
 
 const LatestRecipe = () => {
   const [recipes, setRecipes] = useState([]);
   const [filteredRecipes, setFilteredRecipes] = useState([]);
   const [activeCategory, setActiveCategory] = useState("All");
-
-  const defaultOptions = {
-    reverse: false, // reverse the tilt direction
-    max: 20, // max tilt rotation (degrees)
-    perspective: 1000, // Transform perspective, the lower the more extreme the tilt gets.
-    scale: 1, // 2 = 200%, 1.5 = 150%, etc..
-    speed: 800, // Speed of the enter/exit transition
-    transition: true, // Set a transition on enter/exit.
-    axis: null, // What axis should be disabled. Can be X or Y.
-    reset: true, // If the tilt effect has to be reset on exit.
-    easing: "cubic-bezier(.03,.98,.52,.99)", // Easing on enter/exit.
-  };
 
   useEffect(() => {
     const fetchRecipes = async () => {
@@ -81,8 +83,21 @@ const LatestRecipe = () => {
     fetchRecipes();
   }, []);
 
+  const fetchRecipesByCategory = async (category) => {
+    try {
+      const response = await axios.get(
+        `http://localhost:5000/api/recipes/category/${category}`
+      );
+      // console.log(response);
+      setRecipes(response.data.data);
+    } catch (error) {
+      console.log("Error fetching recipes by category ", error);
+    }
+  };
+  console.log(fetchRecipesByCategory);
+
   const handleCategoryClick = (category) => {
-    setActiveCategory(category);
+    setActiveCategory(category); // Track active tab
     if (category === "All") {
       setFilteredRecipes(recipes.slice(0, 8));
     } else {
@@ -92,6 +107,7 @@ const LatestRecipe = () => {
       setFilteredRecipes(filtered.slice(0, 8)); // Show the first 8 recipes of the selected category
     }
   };
+
   return (
     <div className="bg-orange-50 pt-20 m-0">
       <Container>
@@ -112,6 +128,7 @@ const LatestRecipe = () => {
             recipes crafted to inspire your delicious meal.
           </p>
         </div>
+
         <div>
           {/* Category Tabs */}
           <div className="flex flex-wrap justify-center gap-6 mb-8">
@@ -131,10 +148,10 @@ const LatestRecipe = () => {
                   className="w-16 h-16 mb-2"
                 />
                 <span
-                  className={`text-sm font-medium ${
+                  className={`text-md font-bold ${
                     activeCategory === category.name
                       ? "text-orange-600"
-                      : "text-gray-700"
+                      : "text-orange-900"
                   }`}
                 >
                   {category.name}
@@ -146,10 +163,10 @@ const LatestRecipe = () => {
           {/* Recipe Cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {filteredRecipes.map((recipe) => (
-              <Tilt options={defaultOptions}>
+              <Tilt options={defaultOptions} key={recipe._id}>
                 <div
                   key={recipe._id}
-                  className="p-4 bg-white shadow rounded-lg"
+                  className="p-4 bg-white overflow-hidden border border-orange-800  shadow rounded-lg transition-transform transform  hover:scale-105"
                 >
                   <img
                     src={recipe.image}
@@ -159,32 +176,52 @@ const LatestRecipe = () => {
                   <h3 className="text-xl font-bold text-red-800 mb-2">
                     {recipe.title}
                   </h3>
-                  <p className="text-sm text-orange-900 mb-2 line-clamp-2">
+                  <p className="text-sm text-orange-900 line-clamp-2 mb-4">
                     {recipe.description}
                   </p>
-                  <p className="text-sm text-gray-600 mb-2 line-clamp-2">
-                    <Rating style={{ maxWidth: 120 }} value={recipe.rating} />
+                  <p className="text-sm mb-2 ">
+                    <Rating
+                      style={{ maxWidth: 120 }}
+                      value={recipe.rating}
+                      readOnly
+                      halfFillMode="svg"
+                    />
                   </p>
-                  <p className="text-sm text-gray-500">
-                    By {recipe.author_id.fullName}
+                  <p className="font-bold text-red-900 text-lg">
+                    Category:{" "}
+                    <span className="text-lg font-semibold text-orange-400">
+                      {recipe?.category}
+                    </span>
                   </p>
+                  <div className="flex justify-start text-center items-center gap-4   pt-4">
+                    <img
+                      src={recipe.author_id?.userPhoto || "/default.jpg"} // Fallback to a default image if none provided
+                      alt={recipe.author_id?.fullName || "Author"}
+                      className=" w-16 h-16 object-cover border p-2 bg-red-800 rounded-full"
+                    />
+                    <p className="text-lg font-cursive text-red-900">
+                      {recipe.author_id?.fullName}
+                    </p>
+                  </div>
                 </div>
               </Tilt>
             ))}
           </div>
 
-          {/* "Show All Recipes" Button */}
-          <div className="mt-10 text-center mb-10">
+          {/* Show All Recipes Button */}
+          <div className="mt-10 flex justify-center mb-10">
             <Link to={"/allRecipesPage"}>
-              <button className="px-6 py-3 bg-orange-500 text-white font-medium rounded-md shadow hover:bg-orange-600 transition">
-                Show All Recipes
+              <button className="flex items-center btn  text-amber-950 text-lg font-cursive bg-orange-300 hover:text-white hover:bg-amber-700 ">
+                <img className="w-8 h-8" src={recipeBook} alt="" />
+                View All Recipes
+                <img className="w-6 h-6 pt-1" src={arrowIcon} alt="" />
               </button>
             </Link>
           </div>
           {/* Divider */}
-          <div className="divider divider-error">
+          <div className="divider divider-error mb-0">
             <img
-              className="w-8 h-8 animate-spin"
+              className="w-8 h-8 animate-bounce"
               src={cookBook}
               alt={cookBook}
             />

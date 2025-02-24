@@ -1,10 +1,20 @@
-import React from "react";
 import Container from "../../utils/container/Container";
 // import chafHat from "../../../public/chef-hat.png";
 import bowl from "../../../public/bowl.png";
-import { NavLink } from "react-router";
+import { Link, NavLink, useNavigate } from "react-router";
+import useAuthProvider from "../../utils/authProvider/authProvider";
+import toast from "react-hot-toast";
 
 const Navbar = () => {
+  const navigate = useNavigate();
+  const { user, logout } = useAuthProvider(); // Get user and logout function from authProvider.js
+  console.log("user:", user);
+
+  const handleLogout = () => {
+    logout(); // Call the logout function to remove the token and clear user state
+    toast.success("You Logged Out successfully!");
+    navigate("/");
+  };
   return (
     <div className=" bg-orange-100">
       <Container>
@@ -85,7 +95,7 @@ const Navbar = () => {
               </li>
               <li>
                 <NavLink
-                  to="/allRecipes"
+                  to="/allRecipesPage"
                   className={({ isActive }) =>
                     isActive
                       ? "text-amber-700 font-bold"
@@ -109,7 +119,7 @@ const Navbar = () => {
               </li>
               <li>
                 <NavLink
-                  to="/author"
+                  to="/authors"
                   className={({ isActive }) =>
                     isActive
                       ? "text-amber-700 font-bold"
@@ -143,29 +153,55 @@ const Navbar = () => {
                   Contact Us
                 </NavLink>
               </li>
-              {/* <li>
-                <details>
-                  <summary>Parent</summary>
-                  <ul className="p-2">
-                    <li>
-                      <a>Submenu 1</a>
-                    </li>
-                    <li>
-                      <a>Submenu 2</a>
-                    </li>
-                  </ul>
-                </details>
-              </li> */}
             </ul>
           </div>
-          <div className="navbar-end">
-            <button className="btn text-amber-950 text-lg font-cursive bg-orange-500 hover:text-white hover:bg-amber-900">
-              Join Us
-              <span>
-                <img src={bowl} alt="chef-hat" className="w-10" />
-              </span>
-            </button>
-          </div>
+          {/* User Section */}
+          {user && user.userPhoto ? (
+            <div className="dropdown">
+              <div tabIndex={0} role="button" className=" m-1">
+                <div className="avatar">
+                  <div className="w-14 rounded-full">
+                    <img src={user.userPhoto} />
+                  </div>
+                </div>
+              </div>
+              <ul
+                tabIndex={0}
+                className="dropdown-content menu bg-base-100 rounded-box z-[2]  underline-offset-auto w-40 p-2 shadow "
+              >
+                <li>
+                  <a>{user.userName}</a>
+                </li>
+                <li>
+                  <Link to="/profile">My Profile</Link>
+                </li>
+                {/* {user.role === "user" && (
+                  <li className="text-sm">
+                    <Link to="/user-transaction">My Transaction</Link>
+                  </li>
+                )} */}
+                {user.role === "admin" && ( // Check if user is an admin
+                  <li>
+                    <Link to="/admin/admin-home">Admin Panel</Link>
+                  </li>
+                )}
+                <li>
+                  <a onClick={handleLogout}>Log Out</a>
+                </li>
+              </ul>
+            </div>
+          ) : (
+            <div className="navbar-end">
+              <Link to="/login">
+                <button className="btn text-amber-950 text-lg text-right font-cursive bg-orange-500 hover:text-white hover:bg-amber-900">
+                  Join Us
+                  <span>
+                    <img src={bowl} alt="chef-hat" className="w-10" />
+                  </span>
+                </button>
+              </Link>
+            </div>
+          )}
           {/* </div> */}
         </div>
       </Container>

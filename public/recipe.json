@@ -16,6 +16,7 @@
     ],
     "servings": 4,
     "author_id": "6771d77caef7a6de66a246b0",
+    "rating": 4.5,
     "reviews": [
       {
         "reviewer_id": "6771e203aef7a6de66a246cc",
@@ -25,7 +26,7 @@
       }
     ],
     "favorites": 50,
-    "categories": "Fish"
+    "category": "Fish"
   },
   {
     "title": "Baked Cod",
@@ -44,6 +45,7 @@
     ],
     "servings": 4,
     "author_id": "6771db6baef7a6de66a246b2",
+    "rating": 4.5,
     "reviews": [
       {
         "reviewer_id": "6771e18eaef7a6de66a246ca",
@@ -53,7 +55,7 @@
       }
     ],
     "favorites": 40,
-    "categories": "Fish"
+    "category": "Fish"
   },
 
   {
@@ -73,16 +75,17 @@
     ],
     "servings": 4,
     "author_id": "6771db9faef7a6de66a246b4",
+    "rating": 4,
     "reviews": [
       {
         "reviewer_id": "6771e114aef7a6de66a246c8",
-        "rating": 5,
+        "rating": 4,
         "reviewText": "My kids are picky eaters, but they devoured this. Thank you!",
         "date": "2024-12-25T08:30:00Z"
       }
     ],
     "favorites": 60,
-    "categories": "Fish"
+    "category": "Fish"
   },
 
   {
@@ -104,6 +107,7 @@
     ],
     "servings": 4,
     "author_id": "6771dbd6aef7a6de66a246b6",
+    "rating": 3.5,
     "reviews": [
       {
         "reviewer_id": "6771e0c4aef7a6de66a246c6",
@@ -113,7 +117,7 @@
       }
     ],
     "favorites": 70,
-    "categories": "Fish"
+    "category": "Fish"
   },
   {
     "title": "Italian Pizza",
@@ -134,6 +138,7 @@
     ],
     "servings": 4,
     "author_id": "6771dc0aaef7a6de66a246b8",
+    "rating": 4,
     "reviews": [
       {
         "reviewer_id": "6771e114aef7a6de66a246c8",
@@ -142,8 +147,8 @@
         "date": "2024-12-25T08:30:00Z"
       }
     ],
-    "favorites": 150,
-    "categories": "Italian"
+    "favorites": 50,
+    "category": "Italian"
   },
   {
     "title": "Spaghetti Carbonara",
@@ -165,6 +170,7 @@
     ],
     "servings": 4,
     "author_id": "6771dc4eaef7a6de66a246ba",
+    "rating": 4.5,
     "reviews": [
       {
         "reviewer_id": "6771e18eaef7a6de66a246ca",
@@ -173,8 +179,8 @@
         "date": "2024-12-25T08:30:00Z"
       }
     ],
-    "favorites": 200,
-    "categories": "Italian"
+    "favorites": 30,
+    "category": "Italian"
   },
   {
     "title": "Lasagna Bolognese",
@@ -195,6 +201,7 @@
     ],
     "servings": 6,
     "author_id": "6771dc99aef7a6de66a246bc",
+    "rating": 4,
     "reviews": [
       {
         "reviewer_id": "6771e203aef7a6de66a246cc",
@@ -203,8 +210,8 @@
         "date": "2024-12-25T08:30:00Z"
       }
     ],
-    "favorites": 180,
-    "categories": "Italian"
+    "favorites": 80,
+    "category": "Italian"
   },
   {
     "title": "Eggplant Parmigiana",
@@ -229,6 +236,7 @@
     ],
     "servings": 4,
     "author_id": "6771dccaaef7a6de66a246be",
+    "rating": 4,
     "reviews": [
       {
         "reviewer_id": "6771e203aef7a6de66a246cc",
@@ -237,8 +245,8 @@
         "date": "2024-12-25T08:30:00Z"
       }
     ],
-    "favorites": 180,
-    "categories": "Italian"
+    "favorites": 50,
+    "category": "Italian"
   },
   {
     "title": "Mutton Biryani",
@@ -291,6 +299,7 @@
     ],
     "servings": 4,
     "author_id": "6771dd03aef7a6de66a246c0",
+    "rating": 5,
     "reviews": [
       {
         "reviewer_id": "6771e18eaef7a6de66a246ca",
@@ -300,7 +309,7 @@
       }
     ],
     "favorites": 12,
-    "categories": "Asian"
+    "category": "Asian"
   },
   {
     "title": "Chicken Kabab",
@@ -334,6 +343,7 @@
     ],
     "servings": 4,
     "author_id": "6771db9faef7a6de66a246b4",
+    "rating": 5,
     "reviews": [
       {
         "reviewer_id": "6771e0c4aef7a6de66a246c6",
@@ -349,7 +359,7 @@
       }
     ],
     "favorites": 25,
-    "categories": "Asian"
+    "category": "Asian"
   },
   {
     "title": "Grilled Steak with Herb Butter",
@@ -379,10 +389,11 @@
     ],
     "servings": 2,
     "author_id": "6771dbd6aef7a6de66a246b6",
+    "rating": 4,
     "reviews": [
       {
         "reviewer_id": "6771e0c4aef7a6de66a246c6",
-        "rating": 5,
+        "rating": 4,
         "reviewText": "Absolutely perfect steak! The herb butter adds such a wonderful richness. Will definitely make this again.",
         "date": "2024-12-25T14:30:00Z"
       },
@@ -394,7 +405,7 @@
       }
     ],
     "favorites": 40,
-    "categories": "Asian"
+    "category": "Asian"
   },
   {
     "title": "Garlic Butter Lobster Tail",
@@ -420,10 +431,11 @@
     ],
     "servings": 2,
     "author_id": "6771dc0aaef7a6de66a246b8",
+    "rating": 4.5,
     "reviews": [
       {
         "reviewer_id": "6771e114aef7a6de66a246c8",
-        "rating": 5,
+        "rating": 4.5,
         "reviewText": "This was absolutely amazing! The lobster was perfectly tender and the garlic butter made it so flavorful. Highly recommend!",
         "date": "2024-12-24T16:30:00Z"
       },
@@ -435,7 +447,7 @@
       }
     ],
     "favorites": 25,
-    "categories": "Asian"
+    "category": "Asian"
   },
   {
     "title": "Classic Caesar Salad",
@@ -455,16 +467,17 @@
     ],
     "servings": 4,
     "author_id": "6771d77caef7a6de66a246b0",
+    "rating": 3.5,
     "reviews": [
       {
         "reviewer_id": "6771e18eaef7a6de66a246ca",
-        "rating": 5,
+        "rating": 3.5,
         "reviewText": "A classic salad that's always a hit. The dressing is just perfect!",
         "date": "2024-12-20T14:00:00Z"
       }
     ],
     "favorites": 50,
-    "categories": "Salad"
+    "category": "Salad"
   },
   {
     "title": "Greek Salad",
@@ -487,6 +500,7 @@
     ],
     "servings": 4,
     "author_id": "6771dc0aaef7a6de66a246b8",
+    "rating": 4,
     "reviews": [
       {
         "reviewer_id": "6771e0c4aef7a6de66a246c6",
@@ -496,7 +510,7 @@
       }
     ],
     "favorites": 40,
-    "categories": "Salad"
+    "category": "Salad"
   },
   {
     "title": "Cobb Salad",
@@ -518,6 +532,7 @@
     ],
     "servings": 4,
     "author_id": "6771db6baef7a6de66a246b2",
+    "rating": 5,
     "reviews": [
       {
         "reviewer_id": "6771e18eaef7a6de66a246ca",
@@ -527,7 +542,7 @@
       }
     ],
     "favorites": 30,
-    "categories": "Salad"
+    "category": "Salad"
   },
   {
     "title": "Caprese Salad",
@@ -548,16 +563,17 @@
     ],
     "servings": 2,
     "author_id": "6771dbd6aef7a6de66a246b6",
+    "rating": 4,
     "reviews": [
       {
         "reviewer_id": "6771e114aef7a6de66a246c8",
-        "rating": 5,
+        "rating": 4,
         "reviewText": "So fresh and tasty! The perfect summer dish.",
         "date": "2024-12-21T12:00:00Z"
       }
     ],
     "favorites": 60,
-    "categories": "Salad"
+    "category": "Salad"
   },
   {
     "title": "Chocolate Lava Cake",
@@ -584,10 +600,11 @@
     ],
     "servings": 4,
     "author_id": "6771dc0aaef7a6de66a246b8",
+    "rating": 4.5,
     "reviews": [
       {
         "reviewer_id": "6771e0c4aef7a6de66a246c6",
-        "rating": 5,
+        "rating": 4.5,
         "reviewText": "Absolutely divine! The gooey center is heavenly.",
         "date": "2024-12-26"
       },
@@ -599,7 +616,7 @@
       }
     ],
     "favorites": 320,
-    "categories": "Dessert"
+    "category": "Dessert"
   },
   {
     "title": "Classic Tiramisu",
@@ -620,16 +637,17 @@
     ],
     "servings": 6,
     "author_id": "6771db6baef7a6de66a246b2",
+    "rating": 3.5,
     "reviews": [
       {
         "reviewer_id": "6771e203aef7a6de66a246cc",
-        "rating": 5,
+        "rating": 3.5,
         "reviewText": "The perfect balance of coffee and creaminess!",
         "date": "2024-12-15"
       }
     ],
-    "favorites": 300,
-    "categories": "Dessert"
+    "favorites": 30,
+    "category": "Dessert"
   },
   {
     "title": "Strawberry Shortcake",
@@ -648,16 +666,17 @@
     ],
     "servings": 6,
     "author_id": "6771dc4eaef7a6de66a246ba",
+    "rating": 4.5,
     "reviews": [
       {
         "reviewer_id": "6771e18eaef7a6de66a246ca",
-        "rating": 5,
+        "rating": 4.5,
         "reviewText": "A refreshing and light dessert!",
         "date": "2024-12-22"
       }
     ],
-    "favorites": 120,
-    "categories": "Dessert"
+    "favorites": 20,
+    "category": "Dessert"
   },
   {
     "title": "Banoffee Pie",
@@ -677,6 +696,7 @@
     ],
     "servings": 8,
     "author_id": "6771dccaaef7a6de66a246be",
+    "rating": 5,
     "reviews": [
       {
         "reviewer_id": "6771e0c4aef7a6de66a246c6",
@@ -685,8 +705,8 @@
         "date": "2024-12-23"
       }
     ],
-    "favorites": 250,
-    "categories": "Dessert"
+    "favorites": 50,
+    "category": "Dessert"
   },
   {
     "title": "Beef Enchiladas",
@@ -708,6 +728,7 @@
     ],
     "servings": 4,
     "author_id": "6771dd03aef7a6de66a246c0",
+    "rating": 4,
     "reviews": [
       {
         "reviewer_id": "6771e203aef7a6de66a246cc",
@@ -716,8 +737,8 @@
         "date": "2024-12-20"
       }
     ],
-    "favorites": 410,
-    "categories": "Mexican"
+    "favorites": 40,
+    "category": "Mexican"
   },
   {
     "title": "Mexican Rice",
@@ -739,6 +760,7 @@
     ],
     "servings": 4,
     "author_id": "6771d77caef7a6de66a246b0",
+    "rating": 5,
     "reviews": [
       {
         "reviewer_id": "6771e0c4aef7a6de66a246c6",
@@ -747,8 +769,8 @@
         "date": "2024-12-21"
       }
     ],
-    "favorites": 500,
-    "categories": "Mexican"
+    "favorites": 50,
+    "category": "Mexican"
   },
   {
     "title": "Chicken Quesadilla",
@@ -772,6 +794,7 @@
     ],
     "servings": 4,
     "author_id": "6771dd03aef7a6de66a246c0",
+    "rating": 5,
     "reviews": [
       {
         "reviewer_id": "6771e18eaef7a6de66a246ca",
@@ -786,14 +809,14 @@
         "date": "2024-12-25"
       }
     ],
-    "favorites": 370,
-    "categories": "Mexican"
+    "favorites": 70,
+    "category": "Mexican"
   },
   {
     "title": "Pozole",
     "image": "https://www.zenbelly.com/wp-content/uploads/2020/09/pozole-3-scaled.jpg",
     "description": "A traditional Mexican soup with hominy, pork, and flavorful broth.",
-    "step": [
+    "method": [
       "Cook pork in a pot with onions, garlic, and spices until tender.",
       "Add hominy and simmer for 30 minutes.",
       "Serve hot with toppings like radishes, lime, and cabbage."
@@ -808,6 +831,7 @@
     ],
     "servings": 6,
     "author_id": "6771dd03aef7a6de66a246c0",
+    "rating": 5,
     "reviews": [
       {
         "reviewer_id": "6771e203aef7a6de66a246cc",
@@ -816,7 +840,7 @@
         "date": "2024-12-19"
       }
     ],
-    "favorites": 430,
-    "categories": "Mexican"
+    "favorites": 40,
+    "category": "Mexican"
   }
 ]
