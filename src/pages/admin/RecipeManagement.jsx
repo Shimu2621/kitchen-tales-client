@@ -1,9 +1,14 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import Modal from "react-modal";
+
+// Make sure to bind modal to your appElement (https://reactcommunity.org/react-modal/accessibility/)
+Modal.setAppElement("#root");
 
 const RecipeManagement = () => {
   const [recipes, setRecipes] = useState([]);
-  const [showModal, setShowModal] = useState(false);
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [selectedRecipe, setSelectedRecipe] = useState(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -18,10 +23,9 @@ const RecipeManagement = () => {
 
         // Assuming the response has data in response.data.data
         setRecipes(response.data.data);
+        setLoading(true);
       } catch (error) {
         console.log("Error fetching recipes: ", error);
-      } finally {
-        // Always set loading to false once done
         setLoading(false);
       }
     };
@@ -29,16 +33,27 @@ const RecipeManagement = () => {
     fetchRecipes();
   }, []);
 
-  //Delete recipe
-  const handleDelete = async (id) => {
+  const openModal = (recipe) => {
+    setSelectedRecipe(recipe);
+    setModalIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setSelectedRecipe(null);
+    setModalIsOpen(false);
+  };
+
+  const deleteRecipe = async () => {
+    if (!selectedRecipe) return;
     try {
       const response = await axios.delete(
-        `http://localhost:5000/api/recipes/${id}`
+        `http://localhost:5000/api/blogs${selectedRecipe.id}`
       );
       console.log(response);
-      setRecipes((prev) => prev.filter((recipe) => recipe._id !== id));
+      setRecipes(recipes.filter((recipe) => recipe.id !== selectedRecipe.id));
+      closeModal();
     } catch (error) {
-      console.log("Error deleting recipe:", error);
+      console.log("Error deleting blog:", error);
     }
   };
 
@@ -51,16 +66,16 @@ const RecipeManagement = () => {
   }
 
   return (
-    <div className="p-10">
-      <h1 className="text-3xl text-blue-800 text-center font-bold mb-4">
+    <div className="container mx-auto p-10">
+      <h1 className="text-3xl text-blue-800 text-center font-bold mb-6">
         Recipe Management
       </h1>
 
       {recipes.length === 0 ? (
         <p>No recipes available.</p> // Handle case when no recipes are available
       ) : (
-        <div className="overflow-x-auto bg-white shadow-md rounded-lg">
-          <table className="min-w-full border border-gray-200">
+        <div className="overflow-x-auto bg-white shadow-md rounded-sm">
+          <table className="min-w-full border-collapse border border-gray-200">
             <thead>
               <tr className="bg-gray-100 text-left">
                 <th className="p-3 border">Image</th>
@@ -78,7 +93,7 @@ const RecipeManagement = () => {
                     <img
                       src={recipe.image}
                       alt={recipe.title}
-                      className="w-20 h-20 object-cover"
+                      className="w-32 h-20 object-cover"
                     />
                   </td>
                   <td className="p-3 border">{recipe.title}</td>
@@ -89,8 +104,8 @@ const RecipeManagement = () => {
                   </td>
                   <td className="p-3 border">
                     <button
-                      onClick={() => handleDelete(recipe._id)}
-                      className="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600"
+                      onClick={() => openModal(recipe)}
+                      className="text-white bg-red-500 px-3 py-1 rounded-md"
                     >
                       Delete
                     </button>
@@ -99,30 +114,37 @@ const RecipeManagement = () => {
               ))}
             </tbody>
           </table>
+
+          {/* Delete Confirmation Modal */}
+          <Modal
+            isOpen={modalIsOpen}
+            onRequestClose={closeModal}
+            overlayClassName="fixed inset-0 flex justify-center items-center bg-black bg-opacity-50"
+            className="bg-white rounded p-6 shadow-lg mx-auto mt-40 max-w-sm"
+          >
+            <h2 className="text-lg text-center font-bold mb-3">
+              Confirm Deletion
+            </h2>
+            <p className="text-center">
+              Are you sure, You want to delete this recipe?
+            </p>
+            <div className="flex justify-center gap-2 mt-4">
+              <button
+                onClick={closeModal}
+                className="px-3 py-1 rounded text-white bg-gray-300 hover:bg-gray-400"
+              >
+                Cancel
+              </button>
+              <button
+                onClick={deleteRecipe}
+                className="px-3 py-1 rounded text-white bg-red-500 hover:bg-red-600"
+              >
+                Delete
+              </button>
+            </div>
+          </Modal>
         </div>
       )}
-
-      {/* Modal */}
-      <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-        <div className="bg-white p-6 rounded shadow-lg text-center">
-          <p className="text-lg font-semibold">Are you sure?</p>
-          <p className="text-gray-500">This action cannot be undone.</p>
-          <div className="flex justify-center mt-4">
-            <button
-              className="bg-gray-300 px-4 py-2 rounded mr-2 hover:bg-gray-400"
-              onClick={() => handleDelete(null)}
-            >
-              Cancel
-            </button>
-            <button
-              className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600"
-              onClick={handleDelete}
-            >
-              Delete
-            </button>
-          </div>
-        </div>
-      </div>
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
@@ -10,7 +10,7 @@ import { FaCamera } from "react-icons/fa6";
 import { FaEnvelope } from "react-icons/fa";
 import { RiLockPasswordFill } from "react-icons/ri";
 import { AiFillHome } from "react-icons/ai";
-import { useNavigate } from "react-router";
+import { Link, useNavigate } from "react-router";
 import toast from "react-hot-toast";
 import axios from "axios";
 import { EyeIcon, EyeSlashIcon } from "@heroicons/react/24/outline";
@@ -52,6 +52,7 @@ const Register = () => {
     formState: { errors },
   } = useForm({
     resolver: yupResolver(SignupSchema),
+    defaultValues: { role: "user" }, // Set default value
   });
 
   const onSubmit = async (data) => {
@@ -68,19 +69,19 @@ const Register = () => {
 
     console.log(newUser);
 
-    await axios
-      .post(" http://localhost:5000/api/signup", newUser, {
-        withCredentials: true, // Important for credential
-      })
-      .then((response) => {
-        // console.log(response.data);
-        navigate("/login");
-        toast.success("You have Successfully Registered!");
-      })
-      .catch((error) => {
-        console.log(error.response.data); // Log server error
-        toast.error("Signup failed. Please try again.");
-      });
+    try {
+      const response = await axios.post(
+        "http://localhost:5000/api/signup",
+        newUser,
+        { withCredentials: true }
+      );
+      console.log(response);
+      navigate("/login");
+      toast.success("You have Successfully Registered!");
+    } catch (error) {
+      console.log(error.response?.data || error.message);
+      toast.error("Signup failed. Please try again.");
+    }
   };
 
   return (
@@ -123,7 +124,7 @@ const Register = () => {
               <label className="block mb-1 text-gray-700">UserPhoto</label>
               <input
                 type="text"
-                {...register("photo")}
+                {...register("userPhoto")}
                 placeholder="Enter your imageURL"
                 className="w-full border-gray-300 rounded-md p-2 pl-10 bg-orange-100 focus:ring focus:ring-orange-300"
               />
@@ -211,7 +212,7 @@ const Register = () => {
               <AiFillHome className="absolute left-3 top-10  text-gray-400" />
             </div>
             {/* Hidden Role Field */}
-            <input type="hidden" {...register("role")} value="user" />
+            {/* <input type="hidden" {...register("role")} value="user" /> */}
 
             <div className="pt-12">
               <button
@@ -224,9 +225,9 @@ const Register = () => {
           </form>
           <p className="mt-5 text-center">
             Already have an account?{" "}
-            <a href="/login" className="text-orange-800 hover:underline">
+            <Link to="/login" className="text-orange-800 hover:underline">
               Login
-            </a>
+            </Link>
           </p>
         </div>
       </div>

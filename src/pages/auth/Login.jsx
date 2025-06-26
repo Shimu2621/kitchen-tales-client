@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as Yup from "yup";
@@ -130,13 +130,13 @@ const Login = () => {
           </form>
           {/* Signup Link */}
           <div className="mt-4 text-center text-sm text-gray-500">
-            Don't have an account?{" "}
-            <a
-              href="/register"
-              className="text-orange-800 font-bold hover:underline"
+            Don&apos;t have an account?{" "}
+            <button
+              onClick={() => navigate("/register")}
+              className="text-orange-800 font-semibold hover:underline"
             >
               Sign Up
-            </a>
+            </button>
           </div>
         </div>
       </div>

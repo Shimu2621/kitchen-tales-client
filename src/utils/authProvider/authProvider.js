@@ -13,7 +13,13 @@ const useAuthProvider = () => {
         console.log("Token:", token);
         if (token) {
           const decoded = jwtDecode(token);
-          console.log("decoded:", decoded);
+          console.log("Decoded User Data:", decoded); // Debugging log
+
+          // Check if userPhoto is in the token
+          if (!decoded.userPhoto) {
+            console.warn("userPhoto is missing in token!");
+          }
+
           setUser(decoded);
           setLoading(false);
         } else {

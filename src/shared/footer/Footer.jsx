@@ -1,150 +1,148 @@
-import React from "react";
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 import { AiFillTwitterCircle } from "react-icons/ai";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white ">
+    <footer className="relative text-white overflow-hidden bg-black">
       {/* Banner Section */}
-      <div className="relative ">
-        <img
-          src="https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDI0LTAxL3Jhd3BpeGVsX29mZmljZV8zNF9jbG9zZV91cF9waG90b19vZl9jaGVmX2lzX3ByZXBhcmF0aW9uX29mX3RoZV85ZWQ2NTdiMy1jMTQyLTRmMzktYjZiOS05NGYwNWUyZGY1M2FfMS5qcGc.jpg"
-          className="w-full h-[40vh] md:h-[70vh] object-cover rounded-none"
-          alt="Banner Image"
-        />
-        {/* opacity for shade */}
-        <div className="absolute inset-0 flex flex-col justify-center items-center bg-black bg-opacity-80 text-white">
-          <div className="container mx-auto px-6">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-              {/* Logo Container */}
-              <div className="relative w-[140px] h-[14vh]  items-center text-lg mt-0 ">
-                <img
-                  src="https://img.freepik.com/premium-vector/illustration-cooking-logo-solid-background_852896-5187.jpg?w=360"
-                  alt="Logo"
-                  className="h-32 w-32 object-contain rounded-full "
-                />
-                <p className="absolute top-[75px] left-2 text-center font-bold text-sm lg:text-xl  text-orange-700 mt-16 font-cursive">
-                  Kitchen Tales
-                </p>
-              </div>
-              {/* Important Links */}
-              <div>
-                <h3 className="text-xl font-bold text-orange-200 mb-4">
-                  Important Pages
-                </h3>
-                <ul className="space-y-2">
-                  <li>
-                    <a href="/" className="hover:underline">
-                      Home
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/recipes" className="hover:underline">
-                      Recipes
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/blog" className="hover:underline">
-                      Blog
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/about" className="hover:underline">
-                      About Us
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/contact" className="hover:underline">
-                      Contact Us
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/login" className="hover:underline">
-                      Login
-                    </a>
-                  </li>
-                </ul>
-              </div>
+      <div className="relative">
+        {/* Wrapper to control height */}
+        <div className="relative w-full h-[400px] sm:h-[500px] md:h-[600px] lg:h-[500px] xl:h-[450px]">
+          <img
+            src="https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDI0LTAxL3Jhd3BpeGVsX29mZmljZV8zNF9jbG9zZV91cF9waG90b19vZl9jaGVmX2lzX3ByZXBhcmF0aW9uX29mX3RoZV85ZWQ2NTdiMy1jMTQyLTRmMzktYjZiOS05NGYwNWUyZGY1M2FfMS5qcGc.jpg"
+            className="absolute inset-0 w-full h-full object-cover"
+            alt="Footer Banner"
+          />
+          <div className="absolute inset-0 bg-black bg-opacity-80 flex flex-col justify-center">
+            <div className="container mx-auto px-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                {/* Logo */}
+                <div className="flex flex-col items-center md:items-start">
+                  <img
+                    src="https://img.freepik.com/premium-vector/illustration-cooking-logo-solid-background_852896-5187.jpg?w=360"
+                    alt="Logo"
+                    className="h-24 w-24 rounded-full object-contain block"
+                  />
+                  <p className="mt-4 text-orange-500 font-bold text-lg font-cursive">
+                    Kitchen Tales
+                  </p>
+                </div>
 
-              {/* Social Media */}
-              <div>
-                <h3 className="text-xl font-bold text-orange-200 mb-4">
-                  Follow Us
-                </h3>
-                <div className="flex space-x-4">
-                  <a
-                    href="https://www.facebook.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-white hover:bg-blue-800 bg-blue-600 rounded-full p-2"
-                  >
-                    <FaFacebook size={24} />
-                  </a>
-                  <a
-                    href="https://www.instagram.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-white hover:bg-pink-800 bg-pink-600 rounded-full p-2"
-                  >
-                    <FaInstagram size={24} />
-                  </a>
-                  <a
-                    href="https://www.twitter.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-white hover:bg-blue-800 bg-blue-600 rounded-full p-2"
-                  >
-                    <AiFillTwitterCircle size={24} />
-                  </a>
+                {/* Links */}
+                <div>
+                  <h3 className="text-xl font-bold text-orange-200 mb-4">
+                    Important Pages
+                  </h3>
+                  <ul className="space-y-2 text-sm">
+                    {[
+                      "Home",
+                      "Recipes",
+                      "Blog",
+                      "About Us",
+                      "Contact Us",
+                      "Login",
+                    ].map((text) => (
+                      <li key={text}>
+                        <a
+                          href={`/${text.replace(/ /g, "").toLowerCase()}`}
+                          className="hover:underline"
+                        >
+                          {text}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
 
-                  <a
-                    href="https://www.youtube.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-white hover:bg-red-800 bg-red-600 rounded-full p-2"
-                  >
-                    <FaYoutube size={24} />
-                  </a>
+                {/* Social Icons */}
+                <div>
+                  <h3 className="text-xl font-bold text-orange-200 mb-4">
+                    Follow Us
+                  </h3>
+                  <div className="flex space-x-4">
+                    <a
+                      href="https://www.facebook.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-blue-600 hover:bg-blue-800 p-2 rounded-full"
+                    >
+                      <FaFacebook size={24} />
+                    </a>
+                    <a
+                      href="https://www.instagram.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-pink-600 hover:bg-pink-800 p-2 rounded-full"
+                    >
+                      <FaInstagram size={24} />
+                    </a>
+                    <a
+                      href="https://www.twitter.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-blue-600 hover:bg-blue-800 p-2 rounded-full"
+                    >
+                      <AiFillTwitterCircle size={24} />
+                    </a>
+                    <a
+                      href="https://www.youtube.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-red-600 hover:bg-red-800 p-2 rounded-full"
+                    >
+                      <FaYoutube size={24} />
+                    </a>
+                  </div>
+                </div>
+
+                {/* Contact Info */}
+                <div>
+                  <h3 className="text-xl font-bold text-orange-200 mb-4">
+                    Contact Us
+                  </h3>
+                  <p className="text-sm">
+                    <span className="font-bold">Email:</span>{" "}
+                    contact@website.com
+                  </p>
+                  <p className="text-sm">
+                    <span className="font-bold">Phone:</span> +123-456-7890
+                  </p>
+                  <p className="text-sm">
+                    <span className="font-bold">Address:</span> 123 Main St,
+                    Orlando, FL, USA
+                  </p>
                 </div>
               </div>
+            </div>
+            {/* Newsletter Section */}
+            <div className="pt-10">
+              <div className="container mx-auto px-6">
+                <div className="max-w-4xl mx-auto">
+                  <h3 className="text-xl font-bold mb-4 text-center text-orange-200">
+                    Subscribe to Our Newsletter
+                  </h3>
+                  <form className="flex flex-col md:flex-row gap-4">
+                    <input
+                      type="email"
+                      placeholder="Enter your email"
+                      className="flex-1 p-2 rounded-md border border-gray-300 text-gray-800"
+                    />
+                    <button
+                      type="submit"
+                      className="bg-orange-700 hover:bg-orange-500 text-white py-2 px-4 rounded-md"
+                    >
+                      Subscribe
+                    </button>
+                  </form>
+                </div>
 
-              {/* Contact Details */}
-              <div>
-                <h3 className="text-xl font-bold text-orange-200 mb-4">
-                  Contact Us
-                </h3>
-                <p>Email: contact@website.com</p>
-                <p>Phone: +123-456-7890</p>
-                <p>Address: 123 Main St, Orlando, FL, USA</p>
+                <div className="mt-6 text-center border-t border-gray-700 pt-4 text-sm text-gray-400">
+                  <p>
+                    &copy; {new Date().getFullYear()} Kitchen Tales. All rights
+                    reserved.
+                  </p>
+                </div>
               </div>
-            </div>
-
-            {/* Newsletter Subscription */}
-            <div className="mt-8">
-              <h3 className="text-xl font-bold mb-4">
-                Subscribe to Our Newsletter
-              </h3>
-              <form className="flex flex-col md:flex-row gap-4">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="w-full md:w-2/3 p-2 rounded-md border border-gray-300 text-gray-700"
-                />
-                <button
-                  type="submit"
-                  className="bg-orange-900 hover:bg-orange-700 text-white py-2 px-4 rounded-md"
-                >
-                  Subscribe
-                </button>
-              </form>
-            </div>
-
-            {/* Copyright */}
-            <div className="mt-8 text-center border-t border-gray-700 pt-4">
-              <p>
-                &copy; {new Date().getFullYear()} OurWebsite. All rights
-                reserved.
-              </p>
             </div>
           </div>
         </div>
