@@ -1,23 +1,27 @@
 /* eslint-disable react/prop-types */
 "use client";
 
-import { Star, Quote } from "lucide-react";
+import { Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
+// Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
-
+// Import required modules
 import {
   Navigation,
   Pagination,
   Autoplay,
   EffectCoverflow,
 } from "swiper/modules";
+
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const testimonials = [
   {
@@ -88,6 +92,15 @@ const testimonials = [
   },
 ];
 
+// const categories = [
+//   { name: "Quick Meals", emoji: "⚡" },
+//   { name: "Desserts", emoji: "🍰" },
+//   { name: "Healthy Options", emoji: "🥗" },
+//   { name: "International", emoji: "🌍" },
+//   { name: "Vegetarian", emoji: "🥬" },
+//   { name: "Baking", emoji: "🍞" },
+// ];
+
 function StarRating({ rating }) {
   return (
     <div className="flex gap-1 justify-center mb-4">
@@ -110,17 +123,19 @@ function TestimonialCard({ testimonial }) {
         <img
           src={testimonial.image || "/placeholder.svg"}
           alt={testimonial.name}
-          className="w-20 h-20 sm:w-24 sm:h-24 rounded-full mx-auto mb-4 border-4 border-orange-100 object-cover"
+          width={80}
+          height={80}
+          className="rounded-full mx-auto mb-4 border-4 border-orange-100"
         />
         <StarRating rating={testimonial.rating} />
         <p className="text-gray-700 leading-relaxed mb-6 italic">
           &rdquo;{testimonial.quote}&rdquo;
         </p>
         <div>
-          <h4 className="font-normal font-cursive text-xl text-red-800">
+          <h4 className="font-bold text-gray-900 text-lg">
             {testimonial.name}
           </h4>
-          <p className="text-gray-800 font-bold">{testimonial.role}</p>
+          <p className="text-orange-600 font-medium">{testimonial.role}</p>
           <p className="text-gray-500 text-sm">{testimonial.company}</p>
         </div>
       </CardContent>
@@ -128,60 +143,41 @@ function TestimonialCard({ testimonial }) {
   );
 }
 
-function FeaturedTestimonial({ testimonial }) {
-  return (
-    <div className="relative bg-gradient-to-br from-orange-50 via-red-50 to-pink-50 rounded-3xl p-8 sm:p-12 md:p-16 text-center max-w-4xl mx-auto">
-      <Quote className="w-12 h-12 md:w-16 md:h-16 text-orange-300 mx-auto mb-6" />
-      <StarRating rating={testimonial.ratings || 5} />
-      <blockquote className="text-lg sm:text-xl md:text-2xl font-medium text-gray-900 mb-8 leading-relaxed">
-        &rdquo;{testimonial.quote}&rdquo;
-      </blockquote>
-      <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-        <img
-          src={testimonial.image || "/placeholder.svg"}
-          alt={testimonial.name}
-          className="w-20 h-20 sm:w-24 sm:h-24 rounded-full border-4 border-white shadow-lg object-cover"
-        />
-        <div className="text-center sm:text-left">
-          <div className="font-bold text-gray-900 text-lg sm:text-xl">
-            {testimonial.name}
-          </div>
-          <div className="text-orange-600 font-medium">{testimonial.role}</div>
-          <div className="text-gray-600">{testimonial.company}</div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
 export default function Testimonials() {
-  const featuredTestimonial = testimonials.find((t) => t.featured);
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
+
+  // const featuredTestimonial = testimonials.find((t) => t.featured);
   const regularTestimonials = testimonials.filter((t) => !t.featured);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-orange-50 to-white">
-      {/* Title Section */}
-      <section className="text-center py-12 sm:py-16 md:py-20">
-        <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-orange-800 mb-4">
-          What our community says!
-        </h2>
-        <p className="text-sm sm:text-base md:text-lg text-orange-500 max-w-xl mx-auto">
-          Real reviews from real cooks who have tested and loved the recipes
-          shared on our platform.
-        </p>
-      </section>
+    <div className="min-h-screen bg-orange-50">
+      {/* Main Testimonials Slider */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="relative h-[200px]" data-aos="fade-up">
+            <img
+              className="absolute inset-0 w-[60%] h-[50%] object-cover mx-auto"
+              src={
+                "https://png.pngtree.com/png-clipart/20220925/original/pngtree-red-banner-ribbon-colorful-luxurious-with-golden-border-png-image_8631672.png"
+              }
+              alt=""
+            />
+            <h2 className="absolute text-sm md:text-lg lg:text-3xl py-6 md:py-4  lg:py-0 text-orange-200  font-bold top-[8%] left-[50%] transform -translate-x-1/2 ">
+              What our community says!
+            </h2>
+            <p className="absolute text-center text-xs text-orange-300 font-bold top-[25%] left-[50%] transform -translate-x-1/2 hidden lg:block">
+              Real reviews from real cooks who have tried, tested, and loved the
+              recipes shared on our platform!
+            </p>
+          </div>
 
-      {/* Featured Testimonial */}
-      {featuredTestimonial && (
-        <section className="py-10 md:py-16">
-          <FeaturedTestimonial testimonial={featuredTestimonial} />
-        </section>
-      )}
-
-      {/* Swiper Section */}
-      <section className="py-10 bg-gradient-to-b from-white to-orange-50">
-        <div className="max-w-7xl mx-auto px-4">
           <Swiper
+            data-aos="zoom-in"
             modules={[Navigation, Pagination, Autoplay, EffectCoverflow]}
             effect="coverflow"
             grabCursor={true}
@@ -204,26 +200,87 @@ export default function Testimonials() {
             }}
             navigation={true}
             loop={true}
+            breakpoints={{
+              640: {
+                slidesPerView: 1,
+              },
+              768: {
+                slidesPerView: 2,
+              },
+              1024: {
+                slidesPerView: 3,
+              },
+            }}
             className="testimonials-swiper"
           >
             {regularTestimonials.map((testimonial) => (
-              <SwiperSlide key={testimonial.id}>
-                <div className="max-w-[90vw] sm:max-w-[400px] mx-auto">
-                  <TestimonialCard testimonial={testimonial} />
-                </div>
+              <SwiperSlide key={testimonial.id} style={{ width: "400px" }}>
+                <TestimonialCard testimonial={testimonial} />
               </SwiperSlide>
             ))}
           </Swiper>
         </div>
       </section>
 
+      {/* Additional Testimonials - Card Style */}
+      {/* <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              More success stories
+            </h2>
+            <p className="text-xl text-gray-600">
+              See how home cooks and professional chefs are creating amazing
+              meals with our recipes.
+            </p>
+          </div>
+
+          <Swiper
+            modules={[Navigation, Pagination, Autoplay]}
+            spaceBetween={30}
+            slidesPerView={1}
+            autoplay={{
+              delay: 3500,
+              disableOnInteraction: false,
+            }}
+            pagination={{
+              clickable: true,
+            }}
+            navigation={true}
+            loop={true}
+            breakpoints={{
+              640: {
+                slidesPerView: 1,
+              },
+              768: {
+                slidesPerView: 2,
+              },
+              1024: {
+                slidesPerView: 3,
+              },
+            }}
+            className="simple-testimonials-swiper"
+          >
+            {testimonials.map((testimonial) => (
+              <SwiperSlide key={testimonial.id}>
+                <TestimonialCard testimonial={testimonial} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+      </section> */}
+
       {/* CTA Section */}
-      <section className="py-20 md:py-32 bg-gradient-to-r from-orange-600 via-red-700 to-pink-600">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-8">
+      <section
+        className="py-20 md:py-32 bg-gradient-to-r from-orange-600 via-red-600 to-pink-600"
+        data-aos="fade-up"
+        data-aos-delay="200"
+      >
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
             Ready to join our cooking community?
           </h2>
-          <p className="text-base sm:text-lg md:text-xl text-orange-200 mb-12 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-orange-100 mb-12 max-w-3xl mx-auto leading-relaxed">
             Start sharing your recipes, discover new dishes, and connect with
             fellow food enthusiasts from around the world.
           </p>
@@ -236,7 +293,8 @@ export default function Testimonials() {
             </Button>
             <Button
               size="lg"
-              className="border-2 border-white text-white bg-gradient-to-r from-orange-700 to-pink-700 hover:from-pink-700 hover:to-orange-700 text-lg px-8 py-4 rounded-full font-semibold transition-all duration-300"
+              // variant="outline"
+              className="border-2 border-white text-white bg-gradient-to-r from-orange-600 via-red-600 to-pink-600 hover:bg-gradient-to-r hover:from-pink-600 hover:via-red-600 hover:to-orange-600 text-lg px-8 py-4 rounded-full font-semibold transition-all duration-300"
             >
               Browse Recipes
             </Button>

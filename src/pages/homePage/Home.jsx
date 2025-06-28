@@ -1,17 +1,17 @@
-// import VideoBanner from "./videoBanner/VideoBanner";
-// import LatestRecipe from "./latestRecipe/LatestRecipe";
-// import TopAuthors from "./topAuthors/TopAuthors";
-// import SpecialOffer from "./specialOffer/SpecialOffer";
-// import Testimonials from "./testimonials/Testimonials";
+import VideoBanner from "./videoBanner/VideoBanner";
+import LatestRecipe from "./latestRecipe/LatestRecipe";
+import TopAuthors from "./topAuthors/TopAuthors";
+import SpecialOffer from "./specialOffer/SpecialOffer";
+import Testimonials from "./testimonials/Testimonials";
 
 const Home = () => {
   return (
     <div>
-      {/* <VideoBanner />
+      <VideoBanner />
       <LatestRecipe />
       <TopAuthors />
       <SpecialOffer />
-      <Testimonials /> */}
+      <Testimonials />
     </div>
   );
 };

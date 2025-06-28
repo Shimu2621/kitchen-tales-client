@@ -5,12 +5,11 @@ import axios from "axios";
 import { Link } from "react-router";
 import recipeBook from "../../../../public/images/cook-book.png";
 import arrowIcon from "../../../../public/images/right-arrow (1).png";
-// Rating
 import { Rating } from "@smastrom/react-rating";
-
 import "@smastrom/react-rating/style.css";
-// Tilt
 import { Tilt } from "react-tilt";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const categories = [
   {
@@ -51,7 +50,7 @@ const categories = [
     image: "https://img.icons8.com/color/96/000000/noodles.png",
   },
 ];
-// Tilt
+
 const defaultOptions = {
   reverse: false,
   max: 20,
@@ -73,7 +72,6 @@ const LatestRecipe = () => {
     const fetchRecipes = async () => {
       try {
         const response = await axios.get("http://localhost:5000/api/recipes");
-        // console.log(response);
         setRecipes(response.data.data);
         setFilteredRecipes(response.data.data.slice(0, 8));
       } catch (error) {
@@ -83,55 +81,47 @@ const LatestRecipe = () => {
     fetchRecipes();
   }, []);
 
-  const fetchRecipesByCategory = async (category) => {
-    try {
-      const response = await axios.get(
-        `http://localhost:5000/api/recipes/category/${category}`
-      );
-      // console.log(response);
-      setRecipes(response.data.data);
-    } catch (error) {
-      console.log("Error fetching recipes by category ", error);
-    }
-  };
-  console.log(fetchRecipesByCategory);
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
 
   const handleCategoryClick = (category) => {
-    setActiveCategory(category); // Track active tab
+    setActiveCategory(category);
     if (category === "All") {
       setFilteredRecipes(recipes.slice(0, 8));
     } else {
       const filtered = recipes.filter(
         (recipe) => recipe.category.toLowerCase() === category.toLowerCase()
       );
-      setFilteredRecipes(filtered.slice(0, 8)); // Show the first 8 recipes of the selected category
+      setFilteredRecipes(filtered.slice(0, 8));
     }
   };
 
   return (
     <div className="bg-orange-50 pt-20 m-0">
       <Container>
-        <div className="relative h-[200px]">
+        {/* Title Section */}
+        <div className="relative h-[200px]" data-aos="fade-up">
           <img
-            className="absolute inset-0 w-[60%] h-[40%] object-cover mx-auto"
-            src={
-              "https://png.pngtree.com/png-clipart/20220925/original/pngtree-red-banner-ribbon-colorful-luxurious-with-golden-border-png-image_8631672.png"
-            }
-            alt=""
+            className="absolute inset-0 w-[60%] h-[50%] md:h-[40%] object-cover mx-auto"
+            src="https://png.pngtree.com/png-clipart/20220925/original/pngtree-red-banner-ribbon-colorful-luxurious-with-golden-border-png-image_8631672.png"
+            alt="Ribon"
           />
-          {/* Title section */}
-          <h2 className="absolute text-3xl text-orange-200 font-bold top-[3%] left-[50%] transform -translate-x-1/2">
+          <h2 className="absolute text-md md:text-lg lg:text-3xl py-7 md:py-2  lg:py-0 text-orange-200  font-bold top-[3%] left-[50%] transform -translate-x-1/2">
             Latest Recipes
           </h2>
-          <p className="absolute text-center text-xs text-orange-300 font-bold top-[20%] left-[50%] transform -translate-x-1/2">
+          <p className="absolute text-center  text-xs text-orange-300 font-bold top-[20%] left-[50%] lg:block hidden transform -translate-x-1/2">
             Discover the newest culinary creations! Explore mouthwatering
             recipes crafted to inspire your delicious meal.
           </p>
         </div>
 
         <div>
-          {/* Category Tabs */}
-          <div className="flex flex-wrap justify-center gap-6 mb-8">
+          <div
+            className="flex flex-wrap justify-center gap-6 mb-8"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
             {categories.map((category) => (
               <button
                 key={category.id}
@@ -160,13 +150,13 @@ const LatestRecipe = () => {
             ))}
           </div>
 
-          {/* Recipe Cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {filteredRecipes.map((recipe) => (
+            {filteredRecipes.map((recipe, index) => (
               <Tilt options={defaultOptions} key={recipe._id}>
                 <div
-                  key={recipe._id}
-                  className="p-4 bg-white overflow-hidden border border-orange-800  shadow rounded-lg transition-transform transform  hover:scale-105"
+                  className="p-4 bg-white overflow-hidden border border-orange-800 shadow rounded-lg transition-transform transform hover:scale-105"
+                  data-aos="zoom-in-up"
+                  data-aos-delay={index * 100}
                 >
                   <img
                     src={recipe.image}
@@ -179,7 +169,7 @@ const LatestRecipe = () => {
                   <p className="text-sm text-orange-900 line-clamp-2 mb-4">
                     {recipe.description}
                   </p>
-                  <p className="text-sm mb-2 ">
+                  <p className="text-sm mb-2">
                     <Rating
                       style={{ maxWidth: 120 }}
                       value={recipe.rating}
@@ -193,11 +183,11 @@ const LatestRecipe = () => {
                       {recipe?.category}
                     </span>
                   </p>
-                  <div className="flex justify-start text-center items-center gap-4   pt-4">
+                  <div className="flex justify-start items-center gap-4 pt-4">
                     <img
-                      src={recipe.author_id?.userPhoto || "/default.jpg"} // Fallback to a default image if none provided
+                      src={recipe.author_id?.userPhoto || "/default.jpg"}
                       alt={recipe.author_id?.fullName || "Author"}
-                      className=" w-16 h-16 object-cover border p-2 bg-red-800 rounded-full"
+                      className="w-16 h-16 object-cover border p-2 bg-red-800 rounded-full"
                     />
                     <p className="text-lg font-cursive text-red-900">
                       {recipe.author_id?.fullName}
@@ -208,18 +198,25 @@ const LatestRecipe = () => {
             ))}
           </div>
 
-          {/* Show All Recipes Button */}
-          <div className="mt-10 flex justify-center mb-10">
-            <Link to={"/allRecipesPage"}>
-              <button className="flex items-center btn  text-amber-950 text-lg font-cursive bg-orange-300 hover:text-white hover:bg-amber-700 ">
+          <div
+            className="mt-10 flex justify-center mb-10"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <Link to="/allRecipesPage">
+              <button className="flex items-center btn text-amber-950 text-lg font-cursive bg-orange-300 hover:text-white hover:bg-amber-700">
                 <img className="w-8 h-8" src={recipeBook} alt="" />
                 View All Recipes
                 <img className="w-6 h-6 pt-1" src={arrowIcon} alt="" />
               </button>
             </Link>
           </div>
-          {/* Divider */}
-          <div className="divider divider-error mb-0">
+
+          <div
+            className="divider divider-error mb-0"
+            data-aos="fade-up"
+            data-aos-delay="500"
+          >
             <img
               className="w-8 h-8 animate-bounce"
               src={cookBook}

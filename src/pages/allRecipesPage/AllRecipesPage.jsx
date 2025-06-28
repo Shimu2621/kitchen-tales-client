@@ -12,7 +12,7 @@ const AllRecipesPage = () => {
   const [recipes, setRecipes] = useState([]);
   const [searchValue, setSearchValue] = useState("");
   const [categoryValue, setCategoryValue] = useState("");
-  const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
 
   const searchRef = useRef(null);
   const categoryRef = useRef(null);
@@ -66,7 +66,7 @@ const AllRecipesPage = () => {
       </div>
 
       {/* Search Bar functionality */}
-      <div className="join flex flex-col items-center space-y-4  border border-black bg-black p-8 max-w-4xl w-full mx-auto">
+      <div className="join flex flex-col items-center space-y-4 border border-black bg-black p-8 max-w-4xl w-full mx-auto">
         <div className="flex items-center  w-full max-w-4xl rounded-md">
           <input
             ref={searchRef}
@@ -106,10 +106,10 @@ const AllRecipesPage = () => {
       <div className="pt-20">
         <Container>
           <div className="container mx-auto">
-            <h2 className="text-5xl text-center text-orange-800 font-bold mb-2">
+            <h2 className="text-2xl lg:text-5xl text-center text-orange-800 font-bold mb-2">
               All Recipes
             </h2>
-            <p className="text-center text-lg text-orange-700 mb-10">
+            <p className="text-center text-sm lg:text-lg text-orange-700 mb-10">
               Explore all our delicious recipes, with step-by-step instructions
               and ingredients!
             </p>
@@ -118,12 +118,12 @@ const AllRecipesPage = () => {
               {recipes.map((recipe) => (
                 <div
                   key={recipe._id}
-                  className="p-4 bg-white border border-orange-700 shadow-lg rounded-lg transition-transform transform  hover:scale-105"
+                  className="flex flex-col justify-between h-full p-4 bg-white border border-orange-700 shadow-lg rounded-lg transition-transform transform hover:scale-105"
                 >
                   <img
                     src={recipe.image}
                     alt={recipe.title}
-                    className="w-full h-48 object-cover rounded-md mb-4"
+                    className="w-full h-48 sm:h-52 md:h-56 object-cover rounded-md mb-4"
                   />
                   <h3 className="text-xl font-bold text-red-800 mb-2">
                     {recipe.title}
@@ -159,7 +159,7 @@ const AllRecipesPage = () => {
                       {recipe?.category}
                     </span>
                   </p>
-                  <div className="flex justify-start text-center items-center gap-4   pt-4">
+                  <div className="flex justify-start text-center items-center gap-4  pt-4">
                     <img
                       src={recipe.author_id?.userPhoto || "/default.jpg"} // Fallback to a default image if none provided
                       alt={recipe.author_id?.fullName || "Author"}

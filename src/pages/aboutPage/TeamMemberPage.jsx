@@ -26,7 +26,6 @@ const TeamMemberPage = () => {
             ? "http://localhost:5000/api/members"
             : `http://localhost:5000/api/members/category/${activeCategory}`;
         const response = await axios.get(url);
-        // console.log("Members:", response.data);
         setTeamMembers(response.data.data);
       } catch (error) {
         console.error("Error fetching team members:", error);
@@ -34,57 +33,60 @@ const TeamMemberPage = () => {
     };
     fetchMembers();
   }, [activeCategory]);
+
   return (
     <div className="bg-orange-100">
-      {/* ===================== Banner Section =================== */}
+      {/* Banner */}
       <div className="relative mb-10">
         <img
           src="https://blog.trginternational.com/hs-fs/hubfs/team_work.jpg?width=644&name=team_work.jpg"
-          className="w-full h-[40vh] md:h-[50vh] object-cover rounded-none shadow-lg"
-          alt="Banner Image"
+          className="w-full h-[40vh] md:h-[50vh] object-cover shadow-lg"
+          alt="Banner"
         />
-        {/* opacity for shade */}
-        <div className="absolute inset-0 flex flex-col justify-center items-center bg-black bg-opacity-70 text-white">
-          {/* text */}
-          <h2 className="text-3xl md:text-5xl font-bold mb-4">
+        <div className="absolute inset-0 flex flex-col justify-center items-center bg-black bg-opacity-70 text-white text-center px-4">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-4">
             The Faces Behind the Success
           </h2>
-          <p className="md:text-2xl text-lg text-center font-semibold px-4">
-            Behind every success story is a team of dedicated professionals. Get
-            to know <br /> the people who make our mission possible!
+          <p className="text-sm sm:text-base md:text-xl font-semibold">
+            Behind every success story is a team of dedicated professionals.
+            <br className="hidden sm:block" />
+            Get to know the people who make our mission possible!
           </p>
         </div>
       </div>
 
       <Container>
-        {/* ================== Title Section ================ */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-red-800">Meet Our Team</h1>
-          <p className="text-gray-500 font-semibold">
+        {/* Title */}
+        <div className="text-center mb-16 px-4">
+          <h1 className="text-3xl sm:text-4xl font-bold text-red-800 mb-2">
+            Meet Our Team
+          </h1>
+          <p className="text-sm sm:text-base text-gray-600 font-medium">
             Our team is a group of passionate individuals dedicated to making a
             difference.
-            <br /> Meet the experts who bring our vision to life.
+            <br className="hidden sm:block" />
+            Meet the experts who bring our vision to life.
           </p>
         </div>
 
-        {/* ======================== Tab Section ===================== */}
-        <div className="text-center p-2 pb-16">
+        {/* Tabs */}
+        <div className="text-center px-2 pb-16">
           <Tabs
             selectedIndex={categories.indexOf(activeCategory)}
             onSelect={(index) => setActiveCategory(categories[index])}
           >
-            <TabList className="flex justify-center text-center font-bold mb-10">
+            <TabList className="flex flex-wrap justify-center gap-4 font-semibold mb-10">
               {categories.map((category) => (
                 <Tab key={category}>
-                  <h2
-                    className={`px-2 py-2 text-gray-500 hover:text-red-800 ${
+                  <button
+                    className={`px-3 py-2 rounded-md border ${
                       activeCategory === category
-                        ? "text-gray-500"
-                        : "hover:text-red-800"
+                        ? "bg-red-800 text-white border-red-800"
+                        : "text-gray-600 border-gray-300 hover:bg-red-100"
                     }`}
                   >
                     {category}
-                  </h2>
+                  </button>
                 </Tab>
               ))}
             </TabList>
@@ -92,13 +94,13 @@ const TeamMemberPage = () => {
             {categories.map((category) => (
               <TabPanel key={category}>
                 {activeCategory === category && (
-                  <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 justify-center gap-6 ">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-4">
                     {teamMembers.length > 0 ? (
                       teamMembers.map((member) => (
                         <TeamsCard key={member._id} member={member} />
                       ))
                     ) : (
-                      <p className="text-center col-span-full text-gray-600">
+                      <p className="col-span-full text-center text-gray-600 text-lg">
                         No team members found in this category.
                       </p>
                     )}

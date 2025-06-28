@@ -78,24 +78,27 @@ const AuthorsPage = () => {
           {authors.map((author) => (
             <div
               key={author?._id}
-              className="bg-white shadow-md rounded-lg p-4 flex flex-col items-center transition-transform transform  hover:scale-105 hover:border border-orange-300  hover:bg-orange-200"
+              className="relative bg-white group overflow-hidden shadow-md rounded-lg p-6 flex flex-col items-center text-center transition-all duration-300 ease-in-out transform hover:scale-105 hover:bg-gradient-to-br from-orange-100 via-orange-300 to-orange-500"
             >
+              {/* Gradient hover overlay */}
+              <div className="absolute inset-0 bg-gradient-to-br from-orange-200 via-orange-400 to-orange-600 opacity-0 group-hover:opacity-60 transition duration-300 rounded-lg z-0"></div>
+
               <img
-                className="w-24 h-24 rounded-full object-cover mb-4"
+                className="w-24 h-24 rounded-full object-cover mb-4 z-10 relative border-4 border-orange-200 group-hover:border-white"
                 src={author?.userPhoto}
                 alt={author?.fullName}
               />
-              <h3 className="text-xl font-cursive text-red-900 mb-4">
+              <h3 className="text-xl font-cursive text-red-900 font-semibold mb-4 z-10 relative">
                 {author?.fullName}
               </h3>
-              <div className="flex gap-4">
+              <div className="flex gap-4 z-10 relative">
                 <Link to={`/recipes/author/${author._id}`}>
-                  <button className="px-4 py-2 bg-amber-400 text-white rounded-lg hover:bg-amber-600 transition">
+                  <button className="px-4 py-2 bg-amber-400 text-white rounded-lg hover:bg-amber-600 transition font-semibold">
                     All Recipes
                   </button>
                 </Link>
                 <Link to={`/blogs/${author.blogId}`}>
-                  <button className="px-4 py-2 bg-orange-600 text-white rounded-lg hover:bg-orange-800 transition">
+                  <button className="px-4 py-2 bg-orange-600 text-white rounded-lg hover:bg-orange-800 transition font-semibold">
                     All Blogs
                   </button>
                 </Link>
@@ -103,6 +106,7 @@ const AuthorsPage = () => {
             </div>
           ))}
         </div>
+
         {/* Divider */}
         <div className="divider divider-error mb-0 pb-20 ">
           <img className="w-14 h-14 animate-bounce" src={baker} alt={baker} />

@@ -56,7 +56,7 @@ const BlogPage = () => {
         {/* opacity for shade */}
         <div className="absolute inset-0 flex flex-col justify-center items-center bg-black bg-opacity-80 text-white">
           {/* text */}
-          <h2 className="text-3xl md:text-5xl font-bold mb-4">
+          <h2 className="text-2xl md:text-5xl font-bold mb-4">
             Your Source for Meaningful Content
           </h2>
           <p className="md:text-xl text-lg text-center font-semibold px-4">
@@ -68,18 +68,18 @@ const BlogPage = () => {
       </div>
 
       {/* Search Bar functionality */}
-      <div className="join flex flex-col items-center space-y-4  border border-black bg-black p-8 max-w-4xl w-full mx-auto">
-        <div className="flex items-center mx-auto  w-full max-w-4xl rounded-md">
+      <div className="flex flex-col items-center border border-black bg-black p-6 md:p-8 max-w-4xl w-full mx-auto rounded-md">
+        <div className="flex flex-col sm:flex-row items-center gap-4 w-full">
           <input
             ref={searchRef}
             type="text"
-            className="relative input input-bordered join-item flex-1 bg-white"
+            className="input input-bordered flex-1 bg-white w-full"
             placeholder="Search here..."
           />
 
           <button
             onClick={handleSearch}
-            className="absolute right-[27.5%] btn bg-orange-900 join-item text-white px-7 hover:bg-orange-600"
+            className="btn bg-orange-900 text-white px-6 hover:bg-orange-600 w-full sm:w-auto"
           >
             Search
           </button>
