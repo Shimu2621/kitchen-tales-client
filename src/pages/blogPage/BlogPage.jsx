@@ -19,7 +19,7 @@ const BlogPage = () => {
         const response = await axios.get(
           `https://kitchen-tales-server.onrender.com/api/blogs?search=${searchValue}&category=${categoryValue}`
         );
-        const blogsData = response.data;
+        const blogsData = response.data.data;
         setBlogs(blogsData);
       } catch (error) {
         console.error("Error fetching blogs:", error);

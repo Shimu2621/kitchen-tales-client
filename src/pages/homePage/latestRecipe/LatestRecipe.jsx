@@ -74,8 +74,8 @@ const LatestRecipe = () => {
         const response = await axios.get(
           "https://kitchen-tales-server.onrender.com/api/recipes"
         );
-        setRecipes(response.data);
-        setFilteredRecipes(response.data.slice(0, 8));
+        setRecipes(response.data.data);
+        setFilteredRecipes(response.data.data.slice(0, 8));
       } catch (error) {
         console.log("Failed to fetch all recipes", error);
       }
