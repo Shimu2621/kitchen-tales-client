@@ -206,7 +206,7 @@ const LatestRecipe = () => {
             data-aos-delay="400"
           >
             <Link to="/allRecipesPage">
-              <button className="flex items-center btn text-amber-950 text-lg font-cursive bg-orange-300 hover:text-white hover:bg-amber-700">
+              <button className="flex items-center btn text-amber-950 text-base font-cursive bg-orange-300 hover:text-white hover:bg-amber-700">
                 <img className="w-8 h-8" src={recipeBook} alt="" />
                 View All Recipes
                 <img className="w-6 h-6 pt-1" src={arrowIcon} alt="" />
