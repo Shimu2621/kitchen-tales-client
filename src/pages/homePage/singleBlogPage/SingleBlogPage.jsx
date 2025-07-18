@@ -23,7 +23,7 @@ const SingleBlogPage = () => {
           `https://kitchen-tales-server.onrender.com/api/blogs/${id}`
         );
         console.log("Blog's data:", response.data);
-        setBlog(response.data.data);
+        setBlog(response.data);
       } catch (error) {
         console.error("Error fetching blog:", error);
       }

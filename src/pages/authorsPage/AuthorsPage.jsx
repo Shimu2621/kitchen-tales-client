@@ -17,7 +17,7 @@ const AuthorsPage = () => {
           `https://kitchen-tales-server.onrender.com/api/authors?search=${searchValue}`
         );
         console.log(response.data);
-        setAuthors(response.data.data);
+        setAuthors(response.data);
       } catch (error) {
         console.error("Error fetching authors:", error);
       }

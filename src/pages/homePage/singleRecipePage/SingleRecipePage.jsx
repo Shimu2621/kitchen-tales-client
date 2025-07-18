@@ -25,7 +25,7 @@ const SingleRecipePage = () => {
           `https://kitchen-tales-server.onrender.com/api/recipes/${id}`
         );
         console.log("Recipe's data", response.data);
-        setRecipe(response.data.data);
+        setRecipe(response.data);
       } catch (error) {
         console.error("Error fetching recipe details:", error);
       }
