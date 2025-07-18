@@ -213,8 +213,8 @@ const LatestRecipe = () => {
               </button> */}
 
               <button className="flex items-center gap-2 px-5 py-2 text-amber-950 text-base font-cursive bg-orange-300 hover:text-white hover:bg-amber-700 rounded-md shadow-md">
-                <img className="w-6 h-6" src={recipeBook} alt="Recipe Book" />
-                Explore Recipes
+                <img className="w-8 h-8" src={recipeBook} alt="Recipe Book" />
+                View All Recipes
                 <img
                   className="w-5 h-5 pt-1"
                   src={arrowIcon}

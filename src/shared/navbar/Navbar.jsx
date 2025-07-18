@@ -61,7 +61,7 @@ const Navbar = () => {
 
           {/* Desktop Menu */}
           <div className="hidden lg:flex flex-1 justify-center">
-            <ul className="flex gap-6 font-cursive text-lg text-amber-950 font-bold">
+            <ul className="flex gap-8 font-cursive text-base text-amber-950 font-bold">
               <li>
                 <NavLink
                   to="/"

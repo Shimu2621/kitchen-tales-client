@@ -113,11 +113,16 @@ const TopAuthors = () => {
         {/* Show All Authors Button */}
         <div className="mt-16 flex justify-center mb-10" data-aos="fade-up">
           <Link to={"/authors"}>
-            <button className="flex items-center btn  text-amber-950 text-lg font-cursive bg-orange-300 hover:text-white hover:bg-amber-700 ">
+            <button className="flex items-center gap-2 px-5 py-2 text-amber-950 text-base font-cursive bg-orange-300 hover:text-white hover:bg-amber-700 rounded-md shadow-md">
+              <img className="w-8 h-8" src={chef} alt="Chef" />
+              View All Authors
+              <img className="w-5 h-5 pt-1" src={arrowIcon} alt="Arrow Icon" />
+            </button>
+            {/* <button className="flex items-center btn  text-amber-950 text-lg font-cursive bg-orange-300 hover:text-white hover:bg-amber-700 ">
               <img className="w-8 h-8" src={chef} alt="" />
               View All Authors
               <img className="w-6 h-6 pt-1" src={arrowIcon} alt="" />
-            </button>
+            </button> */}
           </Link>
         </div>
         {/* Divider */}
