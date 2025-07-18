@@ -42,7 +42,7 @@ const Login = () => {
 
     try {
       const response = await axios.post(
-        "https://kitchen-tales-server.onrender.com/signin",
+        "https://kitchen-tales-server.onrender.com/api/signin",
         user,
         {
           withCredentials: true,

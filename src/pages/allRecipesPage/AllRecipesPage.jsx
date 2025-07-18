@@ -21,7 +21,7 @@ const AllRecipesPage = () => {
     const fetchRecipes = async () => {
       try {
         const response = await axios.get(
-          `https://kitchen-tales-server.onrender.com/recipes?search=${searchValue}&category=${categoryValue}`
+          `https://kitchen-tales-server.onrender.com/api/recipes?search=${searchValue}&category=${categoryValue}`
         );
         setRecipes(response.data.data);
       } catch (error) {

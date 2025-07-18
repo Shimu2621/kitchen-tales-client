@@ -20,7 +20,7 @@ const TopAuthors = () => {
     const fetchAuthors = async () => {
       try {
         const response = await axios.get(
-          "https://kitchen-tales-server.onrender.com/authors"
+          "https://kitchen-tales-server.onrender.com/api/authors"
         );
         console.log(response.data);
         setAuthors(response.data.data);

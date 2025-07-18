@@ -72,7 +72,7 @@ const LatestRecipe = () => {
     const fetchRecipes = async () => {
       try {
         const response = await axios.get(
-          "https://kitchen-tales-server.onrender.com/recipes"
+          "https://kitchen-tales-server.onrender.com/api/recipes"
         );
         setRecipes(response.data.data);
         setFilteredRecipes(response.data.data.slice(0, 8));

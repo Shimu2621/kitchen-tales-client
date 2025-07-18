@@ -17,7 +17,7 @@ const RecipeManagement = () => {
         // Log the fetching process to ensure we're hitting the API correctly
         console.log("Fetching recipes...");
         const response = await axios.get(
-          "https://kitchen-tales-server.onrender.com/recipes"
+          "https://kitchen-tales-server.onrender.com/api/recipes"
         );
 
         // Debugging: check the structure of the response
@@ -49,7 +49,7 @@ const RecipeManagement = () => {
     if (!selectedRecipe) return;
     try {
       const response = await axios.delete(
-        `https://kitchen-tales-server.onrender.com/blogs${selectedRecipe.id}`
+        `https://kitchen-tales-server.onrender.com/api/blogs${selectedRecipe.id}`
       );
       console.log(response);
       setRecipes(recipes.filter((recipe) => recipe.id !== selectedRecipe.id));

@@ -14,7 +14,7 @@ const BlogManagement = () => {
     const fetchBlogs = async () => {
       try {
         const response = await axios.get(
-          "https://kitchen-tales-server.onrender.com/blogs"
+          "https://kitchen-tales-server.onrender.com/api/blogs"
         );
         console.log(response);
         setBlogs(response.data.data);
@@ -39,7 +39,7 @@ const BlogManagement = () => {
     if (!selectedBlog) return;
     try {
       const resoonse = await axios.delete(
-        `https://kitchen-tales-server.onrender.com/blogs${selectedBlog.id}`
+        `https://kitchen-tales-server.onrender.com/api/blogs${selectedBlog.id}`
       );
       console.log(resoonse);
       setBlogs(blogs.filter((blog) => blog.id !== selectedBlog.id));
