@@ -14,7 +14,9 @@ const UserManagement = () => {
     const fetchUsers = async () => {
       console.log("Fetched Users:", fetchUsers);
       try {
-        const response = await axios.get("http://localhost:5000/api/users");
+        const response = await axios.get(
+          "https://kitchen-tales-server.onrender.com/users"
+        );
         console.log("API Response:", response);
         setUsers(response.data.data);
       } catch (error) {
@@ -40,9 +42,12 @@ const UserManagement = () => {
   const makeAdmin = async () => {
     if (!selectedUser) return;
     try {
-      await axios.put(`http://localhost:5000/api/users/${selectedUser._id}`, {
-        role: "Admin",
-      });
+      await axios.put(
+        `https://kitchen-tales-server.onrender.com/users/${selectedUser._id}`,
+        {
+          role: "Admin",
+        }
+      );
 
       // Update UI immediately
       setUsers(

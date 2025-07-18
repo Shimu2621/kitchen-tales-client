@@ -71,7 +71,7 @@ const Register = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/signup",
+        "https://kitchen-tales-server.onrender.com/signup",
         newUser,
         { withCredentials: true }
       );

@@ -19,7 +19,9 @@ const TopAuthors = () => {
   useEffect(() => {
     const fetchAuthors = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/authors");
+        const response = await axios.get(
+          "https://kitchen-tales-server.onrender.com/authors"
+        );
         console.log(response.data);
         setAuthors(response.data.data);
       } catch (error) {

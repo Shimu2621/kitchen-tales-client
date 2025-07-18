@@ -17,7 +17,7 @@ const BlogPage = () => {
     const fetchBlogs = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:5000/api/blogs?search=${searchValue}&category=${categoryValue}`
+          `https://kitchen-tales-server.onrender.com/blogs?search=${searchValue}&category=${categoryValue}`
         );
         const blogsData = response.data.data;
         setBlogs(blogsData);

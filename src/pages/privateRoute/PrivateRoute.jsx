@@ -5,7 +5,7 @@ import { Navigate } from "react-router";
 const PrivateRoute = ({ element, allowedRole }) => {
   const { user, loading } = useAuthProvider();
 
-  console.log(user);
+  console.log("User:", user);
 
   if (loading) {
     return (

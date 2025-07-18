@@ -22,7 +22,7 @@ const SingleRecipePage = () => {
     const fetchRecipe = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:5000/api/recipes/${id}`
+          `https://kitchen-tales-server.onrender.com/recipes/${id}`
         );
         console.log("Recipe's data", response.data);
         setRecipe(response.data.data);
@@ -58,7 +58,7 @@ const SingleRecipePage = () => {
     };
     try {
       const response = await axios.patch(
-        `http://localhost:5000/api/recipe/add-review/${id}`,
+        `https://kitchen-tales-server.onrender.com/recipe/add-review/${id}`,
         reviewData
       );
       console.log(response);

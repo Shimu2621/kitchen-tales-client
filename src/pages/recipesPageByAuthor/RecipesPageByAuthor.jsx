@@ -15,7 +15,7 @@ const RecipesPageByAuthor = () => {
     const fetchRecipesByAuthor = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:5000/api/recipes/author/${authorId}`
+          `https://kitchen-tales-server.onrender.com/recipes/author/${authorId}`
         );
         // console.log("Response:", response.data);
         setRecipes(response.data.data);

@@ -20,7 +20,7 @@ const SingleBlogPage = () => {
     const fetchBlog = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:5000/api/blogs/${id}`
+          `https://kitchen-tales-server.onrender.com/blogs/${id}`
         );
         console.log("Blog's data:", response.data);
         setBlog(response.data.data);
@@ -45,7 +45,7 @@ const SingleBlogPage = () => {
 
     try {
       const response = await axios.patch(
-        `http://localhost:5000/api/blog/add-comment/${id}`,
+        `https://kitchen-tales-server.onrender.com/blog/add-comment/${id}`,
         commentData
       );
       console.log(response);

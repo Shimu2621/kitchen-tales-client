@@ -14,7 +14,7 @@ const AuthorsPage = () => {
     const fetchAuthors = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:5000/api/authors?search=${searchValue}`
+          `https://kitchen-tales-server.onrender.com/authors?search=${searchValue}`
         );
         console.log(response.data);
         setAuthors(response.data.data);

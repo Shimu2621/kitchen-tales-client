@@ -23,8 +23,8 @@ const TeamMemberPage = () => {
       try {
         const url =
           activeCategory === "View All"
-            ? "http://localhost:5000/api/members"
-            : `http://localhost:5000/api/members/category/${activeCategory}`;
+            ? "https://kitchen-tales-server.onrender.com/members"
+            : `https://kitchen-tales-server.onrender.com/members/category/${activeCategory}`;
         const response = await axios.get(url);
         setTeamMembers(response.data.data);
       } catch (error) {
