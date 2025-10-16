@@ -103,16 +103,16 @@ const LatestRecipe = () => {
     <div className="bg-orange-50 pt-20 m-0">
       <Container>
         {/* Title Section */}
-        <div className="relative h-[180px] sm:h-[200px]" data-aos="fade-up">
+        <div className="relative h-[200px]" data-aos="fade-up">
           <img
-            className="absolute inset-0 w-[80%] sm:w-[60%] h-[40%] object-contain mx-auto"
+            className="absolute inset-0 w-[60%] h-[50%] md:h-[40%] object-cover mx-auto"
             src="https://png.pngtree.com/png-clipart/20220925/original/pngtree-red-banner-ribbon-colorful-luxurious-with-golden-border-png-image_8631672.png"
-            alt="Ribbon"
+            alt="Ribon"
           />
-          <h2 className="absolute text-lg sm:text-xl md:text-2xl lg:text-3xl text-center text-orange-200 font-bold top-[10%] left-1/2 transform -translate-x-1/2">
+          <h2 className="absolute text-md md:text-lg lg:text-3xl py-7 md:py-2  lg:py-0 text-orange-200  font-bold top-[3%] left-[50%] transform -translate-x-1/2">
             Latest Recipes
           </h2>
-          <p className="absolute text-center text-[10px] sm:text-xs md:text-sm text-orange-300 font-bold top-[40%] left-1/2 transform -translate-x-1/2 w-[90%] sm:w-[70%]">
+          <p className="absolute text-center  text-xs text-orange-300 font-bold top-[20%] left-[50%] lg:block hidden transform -translate-x-1/2">
             Discover the newest culinary creations! Explore mouthwatering
             recipes crafted to inspire your delicious meal.
           </p>
@@ -120,7 +120,7 @@ const LatestRecipe = () => {
 
         <div>
           <div
-            className="flex flex-wrap justify-center gap-3 sm:gap-4 md:gap-6 mb-8 px-2"
+            className="flex flex-wrap justify-center gap-6 mb-8"
             data-aos="fade-up"
             data-aos-delay="300"
           >
@@ -128,20 +128,19 @@ const LatestRecipe = () => {
               <button
                 key={category.id}
                 onClick={() => handleCategoryClick(category.name)}
-                className={`flex flex-col items-center p-2 sm:p-3 md:p-4 px-3 border rounded-lg transition duration-200 
-        ${
-          activeCategory === category.name
-            ? "bg-orange-200 border-orange-500 shadow-md"
-            : "bg-white border-gray-200 hover:border-orange-600 hover:bg-gray-100"
-        }`}
+                className={`flex flex-col items-center p-2 px-4 border rounded-lg hover:shadow-md transition duration-200 ${
+                  activeCategory === category.name
+                    ? "bg-orange-200 border-orange-500 shadow-md"
+                    : "bg-white border-gray-200 hover:border-orange-600 hover:bg-gray-100"
+                }`}
               >
                 <img
                   src={category.image}
                   alt={category.name}
-                  className="w-10 h-10 sm:w-14 sm:h-14 md:w-16 md:h-16 mb-1 sm:mb-2"
+                  className="w-16 h-16 mb-2"
                 />
                 <span
-                  className={`text-sm sm:text-md font-bold ${
+                  className={`text-md font-bold ${
                     activeCategory === category.name
                       ? "text-orange-600"
                       : "text-orange-900"
@@ -153,44 +152,46 @@ const LatestRecipe = () => {
             ))}
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 px-3 sm:px-0">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {filteredRecipes.map((recipe, index) => (
               <Tilt options={defaultOptions} key={recipe._id}>
                 <div
-                  className="p-3 sm:p-4 bg-white overflow-hidden border border-orange-800 shadow rounded-lg hover:scale-105 transition-transform"
+                  className="p-4 bg-white overflow-hidden border border-orange-800 shadow rounded-lg transition-transform transform hover:scale-105"
                   data-aos="zoom-in-up"
                   data-aos-delay={index * 100}
                 >
                   <img
                     src={recipe.image}
                     alt={recipe.name}
-                    className="w-full h-40 sm:h-48 md:h-56 object-cover rounded-md mb-3 sm:mb-4"
+                    className="w-full h-48 object-cover rounded-md mb-4"
                   />
-                  <h3 className="text-lg sm:text-xl font-bold text-red-800 mb-2">
+                  <h3 className="text-xl font-bold text-red-800 mb-2">
                     {recipe.title}
                   </h3>
-                  <p className="text-xs sm:text-sm text-orange-900 line-clamp-2 mb-3">
+                  <p className="text-sm text-orange-900 line-clamp-2 mb-4">
                     {recipe.description}
                   </p>
-                  <Rating
-                    style={{ maxWidth: 100 }}
-                    value={recipe.rating}
-                    readOnly
-                    halfFillMode="svg"
-                  />
-                  <p className="font-bold text-red-900 text-sm sm:text-lg mt-2">
+                  <p className="text-sm mb-2">
+                    <Rating
+                      style={{ maxWidth: 120 }}
+                      value={recipe.rating}
+                      readOnly
+                      halfFillMode="svg"
+                    />
+                  </p>
+                  <p className="font-bold text-red-900 text-lg">
                     Category:{" "}
-                    <span className="text-sm sm:text-lg font-semibold text-orange-400">
+                    <span className="text-lg font-semibold text-orange-400">
                       {recipe?.category}
                     </span>
                   </p>
-                  <div className="flex items-center gap-3 sm:gap-4 pt-3">
+                  <div className="flex justify-start items-center gap-4 pt-4">
                     <img
                       src={recipe.author_id?.userPhoto || "/default.jpg"}
                       alt={recipe.author_id?.fullName || "Author"}
-                      className="w-10 h-10 sm:w-14 sm:h-14 object-cover border p-1 bg-red-800 rounded-full"
+                      className="w-16 h-16 object-cover border p-2 bg-red-800 rounded-full"
                     />
-                    <p className="text-sm sm:text-lg font-cursive text-red-900">
+                    <p className="text-lg font-cursive text-red-900">
                       {recipe.author_id?.fullName}
                     </p>
                   </div>
