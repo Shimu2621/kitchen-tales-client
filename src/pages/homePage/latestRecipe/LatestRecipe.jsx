@@ -152,46 +152,44 @@ const LatestRecipe = () => {
             ))}
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 px-3 sm:px-0">
             {filteredRecipes.map((recipe, index) => (
               <Tilt options={defaultOptions} key={recipe._id}>
                 <div
-                  className="p-4 bg-white overflow-hidden border border-orange-800 shadow rounded-lg transition-transform transform hover:scale-105"
+                  className="p-3 sm:p-4 bg-white overflow-hidden border border-orange-800 shadow rounded-lg hover:scale-105 transition-transform"
                   data-aos="zoom-in-up"
                   data-aos-delay={index * 100}
                 >
                   <img
                     src={recipe.image}
                     alt={recipe.name}
-                    className="w-full h-48 object-cover rounded-md mb-4"
+                    className="w-full h-40 sm:h-48 md:h-56 object-cover rounded-md mb-3 sm:mb-4"
                   />
-                  <h3 className="text-xl font-bold text-red-800 mb-2">
+                  <h3 className="text-lg sm:text-xl font-bold text-red-800 mb-2">
                     {recipe.title}
                   </h3>
-                  <p className="text-sm text-orange-900 line-clamp-2 mb-4">
+                  <p className="text-xs sm:text-sm text-orange-900 line-clamp-2 mb-3">
                     {recipe.description}
                   </p>
-                  <p className="text-sm mb-2">
-                    <Rating
-                      style={{ maxWidth: 120 }}
-                      value={recipe.rating}
-                      readOnly
-                      halfFillMode="svg"
-                    />
-                  </p>
-                  <p className="font-bold text-red-900 text-lg">
+                  <Rating
+                    style={{ maxWidth: 100 }}
+                    value={recipe.rating}
+                    readOnly
+                    halfFillMode="svg"
+                  />
+                  <p className="font-bold text-red-900 text-sm sm:text-lg mt-2">
                     Category:{" "}
-                    <span className="text-lg font-semibold text-orange-400">
+                    <span className="text-sm sm:text-lg font-semibold text-orange-400">
                       {recipe?.category}
                     </span>
                   </p>
-                  <div className="flex justify-start items-center gap-4 pt-4">
+                  <div className="flex items-center gap-3 sm:gap-4 pt-3">
                     <img
                       src={recipe.author_id?.userPhoto || "/default.jpg"}
                       alt={recipe.author_id?.fullName || "Author"}
-                      className="w-16 h-16 object-cover border p-2 bg-red-800 rounded-full"
+                      className="w-10 h-10 sm:w-14 sm:h-14 object-cover border p-1 bg-red-800 rounded-full"
                     />
-                    <p className="text-lg font-cursive text-red-900">
+                    <p className="text-sm sm:text-lg font-cursive text-red-900">
                       {recipe.author_id?.fullName}
                     </p>
                   </div>
